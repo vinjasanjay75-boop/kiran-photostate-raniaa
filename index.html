@@ -1,3 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiran Photostate Rania - Free Job Alert</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f6f9;
+        }
+        header {
+            background-color: #0d6efd;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header p {
+            margin: 5px 0;
+        }
+        .whatsapp-btn {
+            display: inline-block;
+            margin-top: 10px;
+            background-color: #25D366;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+        .search-box {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .search-box input {
+            width: 70%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        .filters {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .filters button {
+            margin: 5px;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #0d6efd;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .filters button:hover {
+            background-color: #084298;
+        }
+        .job-card {
+            background: #ffffff;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            border-left: 5px solid #0d6efd;
+        }
+        .job-card h3 {
+            margin: 0;
+            color: #0d6efd;
+        }
+        .job-card p {
+            margin: 5px 0;
+        }
+        .view-btn {
+            display: inline-block;
+            margin-top: 10px;
+            background-color: #198754;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            background-color: #ffc107;
+            color: #000;
+            border-radius: 3px;
+            font-size: 12px;
+            margin-left: 5px;
+        }
+        footer {
+            background-color: #212529;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        @media (max-width: 600px) {
+            .search-box input {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Kiran Photostate Rania</h1>
+    <p>📢 Latest Government & Private Job Alerts</p>
+    <p>📍 Near Govt. Girl College, Rania | 📞 8168205553</p>
+    <a class="whatsapp-btn" href="https://wa.me/918168205553" target="_blank">
+        📲 Chat on WhatsApp
+    </a>
+</header>
+
+<div class="container">
+    <!-- Search Box -->
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search jobs (e.g., Police, Railway, SSC)...">
+    </div>
+
+    <!-- Category Filters -->
+    <div class="filters">
+        <button onclick="filterJobs('all')">All</button>
+        <button onclick="filterJobs('10th')">10th Pass</button>
+        <button onclick="filterJobs('12th')">12th Pass</button>
+        <button onclick="filterJobs('graduate')">Graduate</button>
+    </div>
+
+    <!-- Job Card 1 -->
+    <div class="job-card" data-category="10th">
+        <h3>SSC MTS Recruitment 2026 <span class="badge">New</span></h3>
+        <p><strong>Organization:</strong> Staff Selection Commission</p>
+        <p><strong>Qualification:</strong> 10th Pass</p>
+        <p><strong>Last Date:</strong> June 2026</p>
+        <a href="ssc-mts-2026.html" class="view-btn">View Details</a>
+    </div>
+
+    <!-- Job Card 2 -->
+    <div class="job-card" data-category="10th">
+        <h3>SSC GD Constable Recruitment 2026</h3>
+        <p><strong>Organization:</strong> SSC</p>
+        <p><strong>Qualification:</strong> 10th Pass</p>
+        <p><strong>Last Date:</strong> October 2026</p>
+        <a href="ssc-gd-2026.html" class="view-btn">View Details</a>
+    </div>
+
+    <!-- Job Card 3 -->
+    <div class="job-card" data-category="12th">
+        <h3>Indian Army Agniveer Recruitment 2026</h3>
+        <p><strong>Qualification:</strong> 10th/12th Pass</p>
+        <p><strong>Last Date:</strong> April 2026</p>
+        <a href="indian-army-agniveer-2026.html" class="view-btn">View Details</a>
+    </div>
+
+    <!-- Job Card 4 -->
+    <div class="job-card" data-category="12th">
+        <h3>Haryana Police Constable Recruitment 2026</h3>
+        <p><strong>Qualification:</strong> 12th Pass</p>
+        <p><strong>Last Date:</strong> August 2026</p>
+        <a href="haryana-police-constable-2026.html" class="view-btn">View Details</a>
+    </div>
+
+    <!-- Job Card 5 -->
+    <div class="job-card" data-category="12th">
+        <h3>Punjab Police Constable Recruitment 2026</h3>
+        <p><strong>Qualification:</strong> 12th Pass</p>
+        <p><strong>Last Date:</strong> June 2026</p>
+        <a href="punjab-police-constable-2026.html" class="view-btn">View Details</a>
+    </div>
+
+    <!-- Job Card 6 -->
+    <div class="job-card" data-category="10th">
+        <h3>Railway Group D Recruitment 2026</h3>
+        <p><strong>Qualification:</strong> 10th Pass</p>
+        <p><strong>Last Date:</strong> July 2026</p>
+        <a href="railway-group-d-2026.html" class="view-btn">View Details</a>
+    </div>
+
+    <!-- Job Card 7 -->
+    <div class="job-card" data-category="10th">
+        <h3>India Post GDS Recruitment 2026</h3>
+        <p><strong>Qualification:</strong> 10th Pass</p>
+        <p><strong>Last Date:</strong> May 2026</p>
+        <a href="india-post-gds-2026.html" class="view-btn">View Details</a>
+    </div>
+
+    <!-- Job Card 8 -->
+    <div class="job-card" data-category="graduate">
+        <h3>DSSSB Various Posts Recruitment 2026</h3>
+        <p><strong>Qualification:</strong> 12th/Graduate</p>
+        <p><strong>Last Date:</strong> September 2026</p>
+        <a href="dsssb-various-posts-2026.html" class="view-btn">View Details</a>
+    </div>
+
+    <!-- Job Card 9 -->
+    <div class="job-card" data-category="12th">
+        <h3>UPSC NDA Recruitment 2026</h3>
+        <p><strong>Qualification:</strong> 12th Pass</p>
+        <p><strong>Last Date:</strong> January 2026</p>
+        <a href="upsc-nda-2026.html" class="view-btn">View Details</a>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 Kiran Photostate Rania | All Rights Reserved</p>
+</footer>
+
+<script>
+    // Search Function
+    document.getElementById('searchInput').addEventListener('keyup', function () {
+        let filter = this.value.toLowerCase();
+        let cards = document.querySelectorAll('.job-card');
+        cards.forEach(card => {
+            let text = card.innerText.toLowerCase();
+            card.style.display = text.includes(filter) ? '' : 'none';
+        });
+    });
+
+    // Category Filter Function
+    function filterJobs(category) {
+        let cards = document.querySelectorAll('.job-card');
+        cards.forEach(card => {
+            if (category === 'all' || card.dataset.category === category) {
+                card.style.display = '';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
 <div class="container">
     <h2>🆕 Latest Job Vacancies</h2>
     <ul>
