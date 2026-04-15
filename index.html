@@ -1,241 +1,208 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kiran Photostate Rania | Sanjay Wajrawat | Global Digital Seva</title>
+    <title>Kiran Photostate Rania | CSC & Online Services</title>
+    <meta name="description" content="Kiran Photostate Rania provides PAN Card, Aadhaar, Photocopy, Lamination, Online Forms, Job Alerts and all CSC services.">
     
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
     <style>
-        :root {
-            --primary-blue: #0366d6;
-            --dark-navy: #001f3f;
-            --accent-gold: #DF8B1B;
-            --danger-red: #b00421;
-            --success-green: #28a745;
-            --light-bg: #f4f7f9;
+        body {
+            font-family: 'Poppins', sans-serif;
         }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Roboto', sans-serif; background-color: var(--light-bg); color: #333; line-height: 1.6; }
-
-        /* --- World Class Header --- */
-        header { 
-            background: linear-gradient(135deg, var(--dark-navy) 0%, #0a3d62 100%);
-            color: white; padding: 30px 20px; text-align: center; border-bottom: 6px solid var(--accent-gold);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                        url('https://images.unsplash.com/photo-1521791136064-7986c2920216');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 20px;
+            text-align: center;
         }
-        .main-brand h1 { font-family: 'Poppins', sans-serif; font-size: clamp(28px, 5vw, 45px); font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin: 0; }
-        .main-brand p { color: var(--accent-gold); font-weight: 600; font-size: 18px; margin-top: 5px; }
-        .owner-tag { background: white; color: var(--dark-navy); padding: 5px 20px; border-radius: 50px; display: inline-block; margin-top: 15px; font-weight: bold; font-size: 14px; }
-
-        /* --- Advanced Navigation --- */
-        nav { background: var(--primary-blue); position: sticky; top: 0; z-index: 1000; display: flex; justify-content: center; flex-wrap: wrap; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
-        nav a { color: white; text-decoration: none; padding: 15px 20px; font-weight: 600; font-size: 13px; text-transform: uppercase; transition: 0.3s; }
-        nav a:hover { background: rgba(255,255,255,0.2); color: var(--accent-gold); }
-
-        /* --- Live News Ticker --- */
-        .news-ticker { background: white; border-bottom: 1px solid #ddd; padding: 10px; font-weight: bold; color: var(--danger-red); border-left: 5px solid var(--danger-red); }
-
-        /* --- Main Layout Architecture --- */
-        .main-wrapper { max-width: 1450px; margin: 20px auto; padding: 0 15px; display: grid; grid-template-columns: 240px 1fr 300px; gap: 20px; }
-
-        /* Sidebar Styling */
-        .sidebar { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.05); height: fit-content; }
-        .sb-header { background: var(--primary-blue); color: white; padding: 12px; font-weight: bold; text-align: center; font-size: 16px; }
-        .sb-links { list-style: none; padding: 10px; }
-        .sb-links li { border-bottom: 1px solid #f0f0f0; padding: 10px 5px; }
-        .sb-links li a { text-decoration: none; color: #444; font-size: 14px; font-weight: 600; display: block; }
-        .sb-links li a:hover { color: var(--primary-blue); transform: translateX(5px); transition: 0.2s; }
-
-        /* Central Content Cards */
-        .content-card { background: white; border-radius: 8px; margin-bottom: 25px; box-shadow: 0 2px 15px rgba(0,0,0,0.08); border-top: 5px solid var(--primary-blue); }
-        .card-title { padding: 15px 20px; background: #fcfcfc; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 10px; }
-        .card-title h2 { font-size: 20px; color: var(--dark-navy); text-transform: uppercase; }
-
-        /* Global Service Grid (Premium Icons) */
-        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; padding: 20px; }
-        .service-item { border: 1px solid #eee; padding: 20px; border-radius: 10px; text-align: center; transition: 0.3s; cursor: pointer; background: #fff; }
-        .service-item:hover { border-color: var(--accent-gold); transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .service-item i { font-size: 35px; color: var(--primary-blue); margin-bottom: 12px; }
-        .service-item h4 { font-size: 16px; margin-bottom: 5px; color: var(--dark-navy); }
-
-        /* Advanced Data Table */
-        .portal-table { width: 100%; border-collapse: collapse; }
-        .portal-table th { background: #eef3f9; padding: 15px; text-align: left; font-size: 14px; border-bottom: 2px solid #ddd; color: var(--primary-blue); }
-        .portal-table td { padding: 15px; border-bottom: 1px solid #f0f0f0; font-size: 14px; }
-        .blink { animation: blinker 1s linear infinite; color: var(--danger-red); font-weight: bold; }
-        @keyframes blinker { 50% { opacity: 0; } }
-
-        /* Modern Buttons */
-        .btn-apply { background: var(--accent-gold); color: white; padding: 8px 18px; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 12px; display: inline-block; transition: 0.3s; }
-        .btn-apply:hover { background: var(--dark-navy); box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
-
-        /* Right Sidebar Contact */
-        .contact-box { background: var(--dark-navy); color: white; padding: 25px; border-radius: 12px; text-align: center; border: 2px solid var(--accent-gold); }
-        .wa-btn { background: #25d366; color: white; padding: 12px; border-radius: 8px; display: flex; align-items: center; justify-content: center; gap: 10px; text-decoration: none; font-weight: bold; margin-top: 15px; font-size: 18px; transition: 0.3s; }
-        .wa-btn:hover { transform: scale(1.05); }
-
-        @media (max-width: 1024px) { .main-wrapper { grid-template-columns: 1fr; } .sidebar { display: none; } }
+        .service-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .section-title {
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            padding: 15px;
+            font-size: 24px;
+            z-index: 1000;
+        }
+        footer {
+            background: #222;
+            color: white;
+            padding: 20px 0;
+        }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="main-brand">
-        <h1>KIRAN PHOTOSTATE RANIA</h1>
-        <p>Sanjay Wajrawat's Advanced Digital Seva Portal</p>
-        <div class="owner-tag"><i class="fas fa-crown"></i> Professional Services: 8168205553</div>
-    </div>
-</header>
-
-<nav>
-    <a href="#jobs">Latest Vacancy</a>
-    <a href="#results">All Results</a>
-    <a href="#admit">Admit Cards</a>
-    <a href="#global">Passport & FIR</a>
-    <a href="#state">State Services</a>
-    <a href="#education">Education Hub</a>
-</nav>
-
-<div class="news-ticker">
-    <marquee onmouseover="this.stop();" onmouseout="this.start();">
-        📢 <span class="blink">NEW:</span> HBSE 10th & 12th Board Result 2026 Link Active | SSC GD Constable Hall Ticket Out | Haryana Police Bharti 2026 Apply Online | Character Certificate & FIR Services Live!
-    </marquee>
-</div>
-
-<div class="main-wrapper">
-    
-    <aside class="sidebar">
-        <div class="sb-header">STATE-WISE JOBS</div>
-        <ul class="sb-links">
-            <li><a href="#"><i class="fas fa-arrow-right"></i> Haryana Jobs</a></li>
-            <li><a href="#"><i class="fas fa-arrow-right"></i> Punjab Jobs</a></li>
-            <li><a href="#"><i class="fas fa-arrow-right"></i> Rajasthan Jobs</a></li>
-            <li><a href="#"><i class="fas fa-arrow-right"></i> Delhi Jobs</a></li>
-            <li><a href="#"><i class="fas fa-arrow-right"></i> All India/Central</a></li>
-        </ul>
-        <div class="sb-header" style="background:var(--success-green); margin-top:20px;">CSC CLOUD</div>
-        <ul class="sb-links">
-            <li><a href="#">• Family ID (PPP)</a></li>
-            <li><a href="#">• Birth/Death Certificate</a></li>
-            <li><a href="#">• Income Certificate</a></li>
-            <li><a href="#">• Ration Card Seva</a></li>
-        </ul>
-    </aside>
-
-    <main>
-        
-        <div class="content-card" id="global" style="border-top-color: var(--accent-gold);">
-            <div class="card-title">
-                <i class="fas fa-shield-alt" style="color:var(--accent-gold)"></i>
-                <h2>Passport, Police FIR & Verification</h2>
-            </div>
-            <div class="service-grid">
-                <div class="service-item">
-                    <i class="fas fa-passport"></i>
-                    <h4>Passport Seva</h4>
-                    <p style="font-size:11px; opacity:0.7;">New / Re-issue / PCC</p>
-                </div>
-                <div class="service-item">
-                    <i class="fas fa-user-police"></i>
-                    <h4>Police Verification</h4>
-                    <p style="font-size:11px; opacity:0.7;">Character & Job Verify</p>
-                </div>
-                <div class="service-item">
-                    <i class="fas fa-file-invoice"></i>
-                    <h4>Online FIR</h4>
-                    <p style="font-size:11px; opacity:0.7;">Lost/Theft Reports</p>
-                </div>
-                <div class="service-item">
-                    <i class="fas fa-id-card-clip"></i>
-                    <h4>Digital IDs</h4>
-                    <p style="font-size:11px; opacity:0.7;">Aadhar/PAN/Voter</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="content-card" id="results">
-            <div class="card-title">
-                <i class="fas fa-graduation-cap" style="color:var(--primary-blue)"></i>
-                <h2>Exam Results & Merit Lists 2026</h2>
-            </div>
-            <table class="portal-table">
-                <thead>
-                    <tr><th>Examination / Board</th><th>Status</th><th>Action</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>HBSE Class 10th/12th Board Result</td><td><span class="blink">Available Now</span></td><td><a href="#" class="btn-apply">View Result</a></td></tr>
-                    <tr><td>SSC CGL 2026 Tier-1 Results</td><td>Declared</td><td><a href="#" class="btn-apply">Check List</a></td></tr>
-                    <tr><td>HSSC CET Mains Group C & D</td><td>New Update</td><td><a href="#" class="btn-apply">Download</a></td></tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="content-card" id="jobs" style="border-top-color: var(--success-green);">
-            <div class="card-title">
-                <i class="fas fa-bullhorn" style="color:var(--success-green)"></i>
-                <h2>New Govt. Vacancies & Yojana</h2>
-            </div>
-            <table class="portal-table">
-                <thead>
-                    <tr><th>Job Title</th><th>Last Date</th><th>Action</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td><b>Haryana Police Constable (6000 Post)</b></td><td>30/05/2026</td><td><a href="#" class="btn-apply" style="background:var(--success-green)">Apply Online</a></td></tr>
-                    <tr><td>Railway RPF SI Recruitment</td><td>15/05/2026</td><td><a href="#" class="btn-apply">Open Form</a></td></tr>
-                    <tr><td>PM Kisan 17th Installment Status</td><td>Live</td><td><a href="#" class="btn-apply">Check Status</a></td></tr>
-                </tbody>
-            </table>
-        </div>
-
-    </main>
-
-    <aside>
-        <div class="contact-box">
-            <h3 style="color:var(--accent-gold); font-size:24px;">Kiran Photostate</h3>
-            <p style="margin-top:10px; font-size:14px; opacity:0.9;">Main Bazar, Rania<br>Near Girl College, Sirsa</p>
-            <p style="margin-top:15px; font-weight:bold; font-size:18px;">Sanjay Wajrawat</p>
-            <p>8168205553</p>
-            <a href="https://chat.whatsapp.com/Gba6o49rKqk4iIQWB5DYWC" class="wa-btn" target="_blank">
-                <i class="fab fa-whatsapp"></i> Join WhatsApp
-            </a>
-        </div>
-
-        <div class="content-card" style="margin-top:20px; padding:15px;">
-            <h4 style="border-bottom:2px solid var(--primary-blue); padding-bottom:5px; color:var(--primary-blue);">State Portals</h4>
-            <ul class="sb-links">
-                <li><a href="#">Saral Haryana</a></li>
-                <li><a href="#">Sewa Kendra Punjab</a></li>
-                <li><a href="#">Rajasthan E-Mitra</a></li>
-                <li><a href="#">UP E-District</a></li>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Kiran Photostate</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#jobs">Job Alerts</a></li>
+                <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
         </div>
-    </aside>
+    </div>
+</nav>
 
-</div>
+<!-- Hero Section -->
+<section class="hero">
+    <h1 class="display-4 fw-bold">Kiran Photostate Rania</h1>
+    <p class="lead">All CSC & Online Services Under One Roof</p>
+    <a href="https://wa.me/918168205553" target="_blank" class="btn btn-success btn-lg me-2">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
+    <a href="tel:+918168205553" class="btn btn-warning btn-lg">
+        <i class="fas fa-phone"></i> Call Now
+    </a>
+</section>
 
-<footer style="background:var(--dark-navy); color:white; padding:60px 20px; text-align:center; border-top: 10px solid var(--accent-gold);">
-    <div style="max-width:1200px; margin:auto; display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:40px; text-align:left;">
-        <div>
-            <h3 style="color:var(--accent-gold)">About Our Hub</h3>
-            <p style="opacity:0.8; font-size:14px;">Kiran Photostate Rania is the most trusted digital center in Haryana for all kinds of online forms, results, and government documentation.</p>
-        </div>
-        <div>
-            <h3 style="color:var(--accent-gold)">Contact Info</h3>
-            <p style="opacity:0.8; font-size:14px;">Opp. Main Bazar, Rania (Sirsa)<br>Mobile: 8168205553<br>WhatsApp for Daily Updates.</p>
-        </div>
-        <div>
-            <h3 style="color:var(--accent-gold)">Site Features</h3>
-            <p style="opacity:0.8; font-size:14px;">Passport, Online FIR, Police Verification, All State Results, Latest Jobs.</p>
+<!-- Services Section -->
+<section id="services" class="py-5">
+    <div class="container text-center">
+        <h2 class="section-title">Our Services</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card service-card p-4">
+                    <i class="fas fa-id-card fa-3x text-primary mb-3"></i>
+                    <h5>PAN Card Services</h5>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card p-4">
+                    <i class="fas fa-fingerprint fa-3x text-success mb-3"></i>
+                    <h5>Aadhaar Update</h5>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card p-4">
+                    <i class="fas fa-file-alt fa-3x text-danger mb-3"></i>
+                    <h5>Online Form Filling</h5>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card p-4">
+                    <i class="fas fa-print fa-3x text-info mb-3"></i>
+                    <h5>Photocopy & Printout</h5>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card p-4">
+                    <i class="fas fa-book fa-3x text-warning mb-3"></i>
+                    <h5>Lamination & Binding</h5>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card p-4">
+                    <i class="fas fa-graduation-cap fa-3x text-secondary mb-3"></i>
+                    <h5>Scholarship & Exam Forms</h5>
+                </div>
+            </div>
         </div>
     </div>
-    <div style="margin-top:50px; opacity:0.3; font-size:12px;">
-        &copy; 2026 Kiran Photostate Rania | Powered by Sanjay Wajrawat (Modern Architecture)
+</section>
+
+<!-- Job Alerts Section -->
+<section id="jobs" class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-center section-title">Latest Job Alerts</h2>
+        <ul class="list-group" id="jobList">
+            <!-- Jobs will appear here -->
+        </ul>
     </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="py-5">
+    <div class="container text-center">
+        <h2 class="section-title">Gallery</h2>
+        <div class="row g-3">
+            <div class="col-md-4">
+                <img src="https://via.placeholder.com/400x300" class="img-fluid rounded" alt="Shop Image">
+            </div>
+            <div class="col-md-4">
+                <img src="https://via.placeholder.com/400x300" class="img-fluid rounded" alt="Shop Image">
+            </div>
+            <div class="col-md-4">
+                <img src="https://via.placeholder.com/400x300" class="img-fluid rounded" alt="Shop Image">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-5 bg-primary text-white text-center">
+    <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <p><strong>Mobile:</strong> 8168205553</p>
+        <p><strong>Address:</strong> Near Govt. Girls College, Rania</p>
+        <iframe src="https://maps.google.com/maps?q=Rania%20Haryana&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                width="100%" height="300" style="border:0;border-radius:10px;"></iframe>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center">
+    <p>© 2026 Kiran Photostate Rania | All Rights Reserved</p>
 </footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/918168205553" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Job Alerts Script -->
+<script>
+    const jobs = [
+        "SSC Phase XIV Recruitment 2026 – 10th/12th/Graduate",
+        "Indian Army Agniveer Recruitment – 10th/12th",
+        "Railway Group D Vacancy – 10th Pass",
+        "NEET UG Exam City & Admit Card Updates"
+    ];
+
+    const jobList = document.getElementById("jobList");
+    jobs.forEach(job => {
+        const li = document.createElement("li");
+        li.className = "list-group-item";
+        li.textContent = job;
+        jobList.appendChild(li);
+    });
+</script>
 
 </body>
 </html>
