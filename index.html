@@ -3,228 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kiran Photostate Rania | Sanjay Wajrawat | CSC, Jobs & Results</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Kiran Photostate Rania | Sanjay Wajrawat | Global Digital Seva</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
     <style>
-        :root { 
-            --primary: #003366; 
-            --accent: #ff4500; 
-            --success: #28a745; 
-            --result: #d63031; 
-            --admit: #0984e3;
-            --bg: #f8f9fa; 
+        :root {
+            --primary-dark: #0a3d62;
+            --accent-orange: #ff6b12;
+            --success-green: #20bf6b;
+            --danger-red: #eb4d4b;
+            --link-blue: #0984e3;
+            --glass: rgba(255, 255, 255, 0.95);
         }
 
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            margin: 0; 
-            background: var(--bg); 
-            color: #333; 
-            line-height: 1.6;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background: #eef2f7; color: #2d3436; overflow-x: hidden; }
+
+        /* Powerful Header with Glassmorphism */
+        header {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, #001f3f 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 10px solid var(--accent-orange);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
-        /* Branding Header */
-        header { 
-            background: var(--primary); 
-            color: white; 
-            padding: 45px 15px; 
-            text-align: center; 
-            border-bottom: 6px solid var(--accent); 
-        }
-        .logo-h1 { margin: 0; font-size: 34px; letter-spacing: 1px; text-transform: uppercase; }
-        .owner-tag { 
-            background: rgba(255,255,255,0.15); 
-            display: inline-block; 
-            padding: 10px 25px; 
-            border-radius: 50px; 
-            margin-top: 15px; 
-            font-weight: bold;
-            border: 1px solid rgba(255,255,255,0.3);
+        .main-title { font-size: clamp(24px, 5vw, 48px); font-weight: 800; letter-spacing: 2px; text-shadow: 3px 3px 6px rgba(0,0,0,0.4); margin-bottom: 10px; }
+        .sub-title { font-size: 18px; opacity: 0.9; font-weight: 300; }
+        .owner-card { 
+            background: var(--glass); color: var(--primary-dark); padding: 12px 30px; 
+            border-radius: 50px; display: inline-flex; align-items: center; gap: 10px;
+            margin-top: 25px; font-weight: bold; border: 2px solid var(--accent-orange);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
-        /* Sticky Contact Bar */
-        .contact-bar { 
-            background: white; 
-            padding: 15px; 
-            display: flex; 
-            justify-content: center; 
-            gap: 25px; 
-            flex-wrap: wrap; 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
-            position: sticky; 
-            top: 0; 
-            z-index: 1000; 
+        /* Navigation Grid */
+        .nav-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px; background: white; padding: 15px; position: sticky; top: 0;
+            z-index: 1000; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
-        .contact-link { text-decoration: none; color: var(--primary); font-weight: bold; display: flex; align-items: center; gap: 8px; font-size: 15px; }
-        .contact-link i { color: var(--accent); font-size: 18px; }
-
-        /* News Ticker */
-        .ticker-container { background: #fff; border-bottom: 1px solid #ddd; padding: 10px; display: flex; align-items: center; }
-        .ticker-label { background: var(--result); color: white; padding: 3px 12px; font-weight: bold; font-size: 13px; margin-right: 15px; border-radius: 3px; }
-
-        /* Layout Container */
-        .main-wrapper { 
-            max-width: 1300px; 
-            margin: 25px auto; 
-            padding: 0 15px; 
-            display: grid; 
-            grid-template-columns: 3fr 1fr; 
-            gap: 25px; 
+        .nav-grid a { 
+            text-decoration: none; color: var(--primary-dark); font-weight: 600; 
+            font-size: 13px; text-align: center; padding: 10px; border-radius: 5px;
+            transition: 0.3s; text-transform: uppercase;
         }
+        .nav-grid a:hover { background: var(--accent-orange); color: white; }
 
-        /* Card System */
-        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); margin-bottom: 25px; border: 1px solid #eee; }
-        .card-header { background: var(--primary); color: white; padding: 15px 20px; font-weight: bold; font-size: 19px; display: flex; align-items: center; gap: 12px; }
+        /* Content Layout */
+        .wrapper { max-width: 1450px; margin: 30px auto; padding: 0 20px; display: grid; grid-template-columns: 3fr 1fr; gap: 30px; }
+
+        /* Section Styling */
+        .section-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.05); margin-bottom: 30px; }
+        .section-header { padding: 20px 25px; color: white; font-weight: bold; font-size: 22px; display: flex; align-items: center; gap: 15px; }
         
-        /* Tables Styles */
+        /* Service Mega Grid */
+        .mega-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 25px; }
+        .service-item { 
+            background: #fff; border: 1px solid #eee; padding: 25px; border-radius: 15px; 
+            display: flex; flex-direction: column; gap: 10px; transition: 0.4s; position: relative;
+            cursor: pointer; overflow: hidden;
+        }
+        .service-item::before { content: ''; position: absolute; top: 0; left: 0; width: 5px; height: 100%; background: var(--accent-orange); }
+        .service-item:hover { transform: translateY(-10px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); border-color: var(--accent-orange); }
+        .service-item i { font-size: 35px; color: var(--primary-dark); }
+        .service-item h3 { font-size: 18px; color: var(--primary-dark); }
+        .service-item p { font-size: 13px; color: #666; }
+
+        /* Table Styling */
         .data-table { width: 100%; border-collapse: collapse; }
-        .data-table th { background: #fdfdfd; padding: 12px 15px; text-align: left; font-size: 14px; color: #777; border-bottom: 2px solid #f1f1f1; }
-        .data-table td { padding: 14px 15px; border-bottom: 1px solid #eee; font-size: 14.5px; }
-        .data-table tr:hover { background-color: #fcfcfc; }
-
+        .data-table th { background: #f8f9fa; padding: 18px; text-align: left; font-size: 14px; border-bottom: 3px solid #eee; }
+        .data-table td { padding: 18px; border-bottom: 1px solid #f1f1f1; font-size: 15px; }
+        .badge { padding: 4px 10px; border-radius: 4px; font-size: 11px; font-weight: bold; text-transform: uppercase; }
+        .bg-new { background: #ffeaa7; color: #d35400; animation: blink 1s infinite; }
+        
         /* Action Buttons */
-        .btn { color: white; text-decoration: none; padding: 6px 14px; border-radius: 4px; font-size: 12px; font-weight: bold; display: inline-block; transition: 0.2s; }
-        .btn-result { background: var(--result); }
-        .btn-admit { background: var(--admit); }
-        .btn-apply { background: var(--success); }
-        .btn:hover { opacity: 0.8; transform: scale(1.05); }
+        .btn-link { 
+            background: var(--link-blue); color: white; padding: 8px 16px; border-radius: 6px; 
+            text-decoration: none; font-weight: bold; font-size: 12px; transition: 0.3s;
+        }
+        .btn-link:hover { background: var(--primary-dark); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
 
-        /* Services Grid */
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; padding: 20px; }
-        .service-box { background: #f9f9f9; padding: 15px; border-radius: 8px; border: 1px solid #eee; display: flex; align-items: center; gap: 10px; font-weight: 500; font-size: 14px; }
-        .service-box i { color: var(--success); font-size: 18px; }
+        /* Sidebar Customization */
+        .sidebar-box { background: var(--primary-dark); color: white; padding: 30px; border-radius: 20px; margin-bottom: 25px; text-align: center; }
+        .whatsapp-float { background: #25d366; color: white; padding: 18px; border-radius: 12px; display: flex; align-items: center; justify-content: center; gap: 10px; text-decoration: none; font-weight: 800; font-size: 18px; margin-top: 20px; box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
 
-        /* Sidebar Styles */
-        .sidebar-card { background: #fff5f0; padding: 20px; border-radius: 10px; border-left: 5px solid var(--accent); margin-bottom: 20px; }
-        .action-btn { display: block; padding: 16px; margin-bottom: 12px; border-radius: 8px; text-align: center; text-decoration: none; font-weight: bold; color: white; font-size: 16px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .wa-green { background: #25d366; }
-        .call-blue { background: var(--primary); }
+        @keyframes blink { 50% { opacity: 0.3; } }
 
-        .blink { animation: blinker 1s linear infinite; color: red; font-weight: bold; font-size: 11px; margin-left: 5px; }
-        @keyframes blinker { 50% { opacity: 0; } }
-
-        @media (max-width: 992px) { .main-wrapper { grid-template-columns: 1fr; } .logo-h1 { font-size: 26px; } }
+        @media (max-width: 1024px) { .wrapper { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="header-content">
-        <h1 class="logo-h1">KIRAN PHOTOSTATE & CSC RANIA</h1>
-        <div class="owner-tag">
-            <i class="fas fa-user-check"></i> Director: Sanjay Wajrawat | <i class="fas fa-phone-alt"></i> 8168205553
+    <div class="logo-area">
+        <h1 class="main-title">KIRAN PHOTOSTATE GLOBAL HUB</h1>
+        <p class="sub-title">Sanjay Wajrawat's Digital India Empowerment Center</p>
+        <div class="owner-card">
+            <i class="fas fa-certificate"></i> Verified Director: Sanjay Wajrawat | 8168205553
         </div>
     </div>
 </header>
 
-<div class="contact-bar">
-    <a href="tel:8168205553" class="contact-link"><i class="fas fa-mobile-alt"></i> 8168205553</a>
-    <a href="https://chat.whatsapp.com/Gba6o49rKqk4iIQWB5DYWC" class="contact-link" target="_blank"><i class="fab fa-whatsapp"></i> Join WhatsApp Group</a>
-    <span class="contact-link"><i class="fas fa-map-marker-alt"></i> Near Girl College, Rania</span>
-</div>
+<nav class="nav-grid">
+    <a href="#results"><i class="fas fa-file-invoice"></i> Results</a>
+    <a href="#jobs"><i class="fas fa-user-tie"></i> Jobs 2026</a>
+    <a href="#global"><i class="fas fa-globe"></i> Global Services</a>
+    <a href="#police"><i class="fas fa-shield-halved"></i> Police/Verification</a>
+    <a href="#yojna"><i class="fas fa-hand-holding-heart"></i> Govt Yojna</a>
+</nav>
 
-<div class="ticker-container">
-    <div class="ticker-label">NEW UPDATES</div>
-    <marquee style="font-weight: bold; color: var(--result);">
-        HBSE 10th & 12th Board Results 2026 - Check Now | SSC CGL Admit Card Released | Haryana Police Last Date Extended | Rania Girl College New Admission Forms
-    </marquee>
-</div>
-
-<div class="main-wrapper">
-    
-    <div class="content">
+<div class="wrapper">
+    <div class="main-content">
         
-        <div class="card" style="border-top: 5px solid var(--result);">
-            <div class="card-header" style="background: white; color: var(--result);">
-                <i class="fas fa-graduation-cap"></i> EXAM RESULTS & ADMIT CARDS 2026
+        <div class="section-card" id="global">
+            <div class="section-header" style="background: var(--primary-dark);">
+                <i class="fas fa-earth-americas"></i> ADVANCED DIGITAL PORTAL (Global & National)
+            </div>
+            <div class="mega-grid">
+                <div class="service-item">
+                    <i class="fas fa-passport"></i>
+                    <h3>Passport Seva</h3>
+                    <p>New Passport, Re-issue, PCC, and Visa Consultation.</p>
+                    <a href="#" class="btn-link">Process Now</a>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-user-police"></i>
+                    <h3>Police Verification</h3>
+                    <p>Character Certificate, Tenant Verification, & Job Verification.</p>
+                    <a href="#" class="btn-link">Apply Online</a>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-file-shield"></i>
+                    <h3>Online FIR (E-FIR)</h3>
+                    <p>Report Lost Mobile, Documents, or Theft instantly online.</p>
+                    <a href="#" class="btn-link">File Report</a>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-id-card-clip"></i>
+                    <h3>Digital ID Hub</h3>
+                    <p>Aadhar, PAN, Voter, Driving License, & Family ID Updates.</p>
+                    <a href="#" class="btn-link">Update Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-card" id="results">
+            <div class="section-header" style="background: var(--danger-red);">
+                <i class="fas fa-graduation-cap"></i> EDUCATION & EXAM PORTAL (All India)
             </div>
             <table class="data-table">
                 <thead>
-                    <tr><th>Exam/Board Name</th><th>Status</th><th>Download/Check</th></tr>
+                    <tr><th>Exam / Board Name</th><th>Update</th><th>Action</th></tr>
                 </thead>
                 <tbody>
-                    <tr><td><b>HBSE Class 10th/12th Board Result</b></td><td><span style="color:var(--result); font-weight:bold;">Declared</span></td><td><a href="#" class="btn btn-result">Check Result</a></td></tr>
-                    <tr><td><b>SSC GD Constable Admit Card</b></td><td><span style="color:var(--admit); font-weight:bold;">Live</span></td><td><a href="#" class="btn btn-admit">Download Card</a></td></tr>
-                    <tr><td><b>CBSE Board Result 2026</b></td><td><span style="color:var(--result); font-weight:bold;">Available</span></td><td><a href="#" class="btn btn-result">View Result</a></td></tr>
-                    <tr><td><b>HSSC CET Phase-II Admit Card</b></td><td><span style="color:var(--admit); font-weight:bold;">Live</span></td><td><a href="#" class="btn btn-admit">Get Admit Card</a></td></tr>
-                    <tr><td><b>Sainik School Entrance Result</b></td><td><span style="color:var(--result); font-weight:bold;">Check Now</span></td><td><a href="#" class="btn btn-result">View</a></td></tr>
+                    <tr><td>HBSE Class 10th & 12th Board Result 2026</td><td><span class="badge bg-new">Declared</span></td><td><a href="#" class="btn-link" style="background:var(--danger-red)">Check Result</a></td></tr>
+                    <tr><td>CBSE All Regions Final Result</td><td><span class="badge" style="background:#eee">Live Soon</span></td><td><a href="#" class="btn-link">View</a></td></tr>
+                    <tr><td>SSC CGL 2026 Tier-1 Admit Card</td><td><span class="badge" style="background:#d1f2eb; color:#16a085">Download</span></td><td><a href="#" class="btn-link">Get Admit Card</a></td></tr>
+                    <tr><td>HSSC Haryana CET Mains Result</td><td><span class="badge bg-new">New Update</span></td><td><a href="#" class="btn-link" style="background:var(--danger-red)">View Result</a></td></tr>
+                    <tr><td>JEE Main & NEET 2026 Merit List</td><td><span class="badge">Announced</span></td><td><a href="#" class="btn-link">Check Rank</a></td></tr>
                 </tbody>
             </table>
         </div>
 
-        <div class="card" style="border-top: 5px solid var(--success);">
-            <div class="card-header" style="background: white; color: var(--success);">
-                <i class="fas fa-briefcase"></i> LATEST ONGOING VACANCIES
+        <div class="section-card" id="state">
+            <div class="section-header" style="background: var(--success-green);">
+                <i class="fas fa-map-location-dot"></i> ALL STATE SEVA KENDRA (Haryana, Punjab, RJ, UP)
             </div>
-            <table class="data-table">
-                <thead>
-                    <tr><th>Job Notification</th><th>Total Post</th><th>Last Date</th><th>Action</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td><b>Haryana Police Constable Bharti</b><span class="blink">New</span></td><td>6000</td><td>30/04/2026</td><td><a href="#" class="btn btn-apply">Apply Online</a></td></tr>
-                    <tr><td><b>Railway RPF SI & Constable</b></td><td>4660</td><td>14/05/2026</td><td><a href="#" class="btn btn-apply">View Form</a></td></tr>
-                    <tr><td><b>SSC Selection Post Phase XIV</b></td><td>2000+</td><td>18/05/2026</td><td><a href="#" class="btn btn-apply">Apply</a></td></tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="card">
-            <div class="card-header"><i class="fas fa-laptop-code"></i> ALL CSC & DIGITAL SERVICES (Humare Kaam)</div>
-            <div class="services-grid">
-                <div class="service-box"><i class="fas fa-id-card"></i> Aadhar Card Online</div>
-                <div class="service-box"><i class="fas fa-address-card"></i> PAN Card New/Update</div>
-                <div class="service-box"><i class="fas fa-users"></i> Family ID (PPP) Split</div>
-                <div class="service-box"><i class="fas fa-file-invoice"></i> BPL/Ration Card</div>
-                <div class="service-box"><i class="fas fa-graduation-cap"></i> All Scholarship Seva</div>
-                <div class="service-box"><i class="fas fa-hand-holding-heart"></i> Old Age Pension</div>
-                <div class="service-box"><i class="fas fa-voter-id"></i> Voter ID Application</div>
-                <div class="service-box"><i class="fas fa-tractor"></i> PM Kisan eKYC</div>
-                <div class="service-box"><i class="fas fa-file-signature"></i> Legal Affidavits</div>
-                <div class="service-box"><i class="fas fa-university"></i> Bank A/C Opening</div>
-                <div class="service-box"><i class="fas fa-car"></i> Driving License DL</div>
-                <div class="service-box"><i class="fas fa-passport"></i> Passport Application</div>
+            <div class="mega-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                <div class="service-item" style="text-align:center;">
+                    <i class="fas fa-landmark" style="color:#e67e22"></i>
+                    <h3>Haryana</h3>
+                    <p>Saral Haryana, PPP, Antyodaya</p>
+                </div>
+                <div class="service-item" style="text-align:center;">
+                    <i class="fas fa-landmark" style="color:#2980b9"></i>
+                    <h3>Punjab</h3>
+                    <p>Sewa Kendra, Punjab e-District</p>
+                </div>
+                <div class="service-item" style="text-align:center;">
+                    <i class="fas fa-landmark" style="color:#27ae60"></i>
+                    <h3>Rajasthan</h3>
+                    <p>E-Mitra Services, Jan-Aadhar</p>
+                </div>
+                <div class="service-item" style="text-align:center;">
+                    <i class="fas fa-landmark" style="color:#8e44ad"></i>
+                    <h3>Uttar Pradesh</h3>
+                    <p>e-Sathi, UP e-District Portals</p>
+                </div>
             </div>
         </div>
 
     </div>
 
     <div class="sidebar">
-        
-        <div class="sidebar-card">
-            <h3 style="margin-top: 0; color: var(--accent);"><i class="fas fa-store"></i> Shop Info</h3>
-            <p><b>Kiran Photostate</b><br>
-            Main Bazar, **Near Girl College**<br>
-            Rania, Sirsa (Haryana)<br>
-            Director: <b>Sanjay Wajrawat</b></p>
-            <p><small>Photocopy, Printing, aur Sabhi Online Form bhare jate hain.</small></p>
+        <div class="sidebar-box">
+            <h3 style="color: var(--accent-orange); font-size: 24px;">Kiran Photostate</h3>
+            <p style="margin-top:10px;"><b>Near Girl College, Rania</b><br>Main Bazar, Sirsa</p>
+            <p style="font-size:14px; opacity:0.8; margin-top:10px;">Expert in All Government Online Services Since Years.</p>
+            
+            <a href="https://chat.whatsapp.com/Gba6o49rKqk4iIQWB5DYWC" class="whatsapp-float" target="_blank">
+                <i class="fab fa-whatsapp"></i> JOIN GROUP
+            </a>
         </div>
 
-        <a href="https://chat.whatsapp.com/Gba6o49rKqk4iIQWB5DYWC" class="action-btn wa-green" target="_blank">
-            <i class="fab fa-whatsapp"></i> Join WhatsApp Group
-        </a>
-        <a href="tel:8168205553" class="action-btn call-blue">
-            <i class="fas fa-phone-alt"></i> Call Sanjay Wajrawat
-        </a>
-
-        <div class="card" style="margin-top: 15px;">
-            <div class="card-header" style="font-size: 15px;">Quick Links</div>
-            <div style="padding: 10px; font-size: 14px;">
-                <a href="#" style="display:block; padding:8px 5px; color:#333; text-decoration:none; border-bottom:1px solid #eee;">• Sarkari Result Official</a>
-                <a href="#" style="display:block; padding:8px 5px; color:#333; text-decoration:none; border-bottom:1px solid #eee;">• HBSE Official Website</a>
-                <a href="#" style="display:block; padding:8px 5px; color:#333; text-decoration:none;">• HSSC Recruitment Portal</a>
-            </div>
+        <div class="section-card" style="padding: 20px;">
+            <h4 style="color: var(--primary-dark); border-bottom: 2px solid var(--accent-orange); padding-bottom: 10px;">Important Tools</h4>
+            <ul style="list-style: none; margin-top: 15px; line-height: 2.5; font-size: 14px;">
+                <li><i class="fas fa-file-pdf"></i> Resume Maker (Free)</li>
+                <li><i class="fas fa-image"></i> Photo/Sign Resizer</li>
+                <li><i class="fas fa-language"></i> Hindi/English Typing</li>
+                <li><i class="fas fa-print"></i> Document Lamination</li>
+            </ul>
         </div>
-
     </div>
 </div>
 
-<footer style="background: var(--primary); color: white; padding: 50px 15px; text-align: center; border-top: 5px solid var(--accent); margin-top: 40px;">
-    <div style="max-width: 1200px; margin: auto;">
-        <h2 style="margin: 0;">Kiran Photostate Rania</h2>
-        <p>Expert in All Govt Jobs & CSC Services | Director: Sanjay Wajrawat</p>
-        <p><i class="fas fa-map-marker-alt"></i> Main Bazar, Near Girl College, Rania (Sirsa)</p>
-        <p style="font-size: 13px; opacity: 0.6; margin-top: 25px;">&copy; 2026 | Site Designed & Managed by Sanjay Wajrawat (8168205553)</p>
+<footer style="background: #001529; color: white; padding: 80px 20px; text-align: center; border-top: 10px solid var(--accent-orange);">
+    <div style="max-width: 1200px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; text-align: left;">
+        <div>
+            <h2 style="color: var(--accent-orange);">SANJAY WAJRAWAT</h2>
+            <p style="opacity:0.7; font-size: 14px; margin-top: 15px;">Duniya ki har digital service ab aapki dukan "Kiran Photostate" par uplabd hai. Hum vishwas aur speed ke liye jane jate hain.</p>
+        </div>
+        <div>
+            <h3 style="color: var(--accent-orange);">Our HQ</h3>
+            <p style="font-size: 14px;">Main Bazar, Rania<br>Near Girl College, Sirsa (HR)<br>Mobile: 8168205553</p>
+        </div>
+        <div>
+            <h3 style="color: var(--accent-orange);">Core Languages</h3>
+            <p style="font-size: 12px; opacity: 0.5;">Optimized with HTML5, CSS3 Grid, Modern JS, & Neural Design Architecture.</p>
+        </div>
     </div>
+    <p style="margin-top: 50px; opacity: 0.4;">&copy; 2026 Kiran Photostate Global. All Rights Reserved.</p>
 </footer>
 
 </body>
