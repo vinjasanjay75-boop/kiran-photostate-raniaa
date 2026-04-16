@@ -1,25 +1,20 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kiran Photostate & CSC Center - Rania</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
         body {
-            background: #f4f7fb;
-            color: #333;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f5f6fa;
         }
         header {
-            background: linear-gradient(45deg, #0d47a1, #1976d2);
-            color: white;
+            background: #ffffff;
             padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -30,41 +25,51 @@
             max-width: 1200px;
         }
         .logo {
-            text-align: center;
-            font-size: 28px;
+            font-size: 24px;
             font-weight: 600;
+            color: #1e88e5;
+            text-align: center;
         }
         nav {
             text-align: center;
             margin-top: 10px;
         }
         nav a {
-            color: white;
-            text-decoration: none;
             margin: 0 12px;
+            text-decoration: none;
+            color: #333;
             font-weight: 500;
         }
-        nav a:hover {
-            text-decoration: underline;
-        }
         .hero {
-            background: linear-gradient(rgba(13,71,161,0.8), rgba(25,118,210,0.8)),
-                        url('https://images.unsplash.com/photo-1521791136064-7986c2920216') no-repeat center/cover;
+            background: linear-gradient(45deg, #1e88e5, #42a5f5);
             color: white;
             text-align: center;
-            padding: 80px 20px;
+            padding: 60px 20px;
         }
-        .hero h1 {
-            font-size: 38px;
-            margin-bottom: 10px;
+        .search-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: -30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .search-box input, .search-box select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            min-width: 200px;
         }
         section {
             padding: 50px 0;
         }
         h2 {
             text-align: center;
+            color: #1e88e5;
             margin-bottom: 30px;
-            color: #0d47a1;
         }
         .grid {
             display: grid;
@@ -75,28 +80,26 @@
             background: white;
             padding: 20px;
             border-radius: 10px;
-            text-align: center;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             transition: 0.3s;
         }
         .card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-5px);
         }
-        .job-controls {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .job-controls input, .job-controls select {
-            padding: 10px;
-            margin: 5px;
+        .card a {
+            display: inline-block;
+            margin-top: 10px;
+            background: #1e88e5;
+            color: white;
+            padding: 8px 15px;
             border-radius: 5px;
-            border: 1px solid #ccc;
+            text-decoration: none;
         }
         footer {
-            background: #0d47a1;
+            background: #1e88e5;
             color: white;
             text-align: center;
-            padding: 20px 10px;
+            padding: 20px;
         }
         .whatsapp {
             position: fixed;
@@ -104,15 +107,10 @@
             right: 20px;
             background: #25D366;
             color: white;
-            padding: 15px 18px;
+            padding: 15px;
             border-radius: 50%;
-            font-size: 22px;
             text-decoration: none;
-        }
-        iframe {
-            width: 100%;
-            border: 0;
-            border-radius: 10px;
+            font-size: 22px;
         }
     </style>
 </head>
@@ -120,9 +118,9 @@
 
 <header>
     <div class="container">
-        <div class="logo">Kiran Photostate & CSC Center, Rania</div>
+        <div class="logo">Kiran Photostate & CSC Center<br><small>Sanjay Wajrawat</small></div>
         <nav>
-            <a href="#services">CSC Services</a>
+            <a href="#services">Services</a>
             <a href="#bank">Banking</a>
             <a href="#jobs">Jobs</a>
             <a href="#contact">Contact</a>
@@ -131,9 +129,22 @@
 </header>
 
 <section class="hero">
-    <h1>Welcome to Kiran Photostate & CSC Center</h1>
-    <p>All CSC, Banking & Government Job Services at One Place</p>
+    <h1>All CSC & Government Job Services at One Place</h1>
+    <p>Apply for PAN Card, Aadhaar, Banking Services & Latest Government Jobs</p>
 </section>
+
+<!-- Search Box -->
+<div class="container">
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search Jobs...">
+        <select id="stateFilter">
+            <option value="All">All States</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Delhi">Delhi</option>
+        </select>
+    </div>
+</div>
 
 <!-- CSC Services -->
 <section id="services">
@@ -141,13 +152,11 @@
         <h2>CSC Services</h2>
         <div class="grid">
             <div class="card">PAN Card Apply</div>
-            <div class="card">Aadhar Update</div>
+            <div class="card">Aadhaar Update</div>
             <div class="card">Voter ID</div>
             <div class="card">Ayushman Bharat Card</div>
             <div class="card">Ration Card</div>
-            <div class="card">Birth & Death Certificate</div>
-            <div class="card">Electricity/Water/Gas Bill Payment</div>
-            <div class="card">Insurance Services</div>
+            <div class="card">Bill Payment</div>
         </div>
     </div>
 </section>
@@ -158,52 +167,35 @@
         <h2>Banking Services</h2>
         <div class="grid">
             <div class="card">Money Transfer</div>
-            <div class="card">AEPS Cash Withdrawal</div>
+            <div class="card">AEPS Withdrawal</div>
             <div class="card">Mini Statement</div>
             <div class="card">Account Opening</div>
-            <div class="card">PMJJBY / PMSBY</div>
-            <div class="card">Atal Pension Yojana</div>
         </div>
     </div>
 </section>
 
-<!-- Job Section -->
+<!-- Job Listings -->
 <section id="jobs">
     <div class="container">
         <h2>Latest Government Jobs</h2>
-        <div class="job-controls">
-            <input type="text" id="searchInput" placeholder="Search Jobs...">
-            <select id="stateFilter">
-                <option value="All">All States</option>
-                <option value="All India">All India</option>
-                <option value="Haryana">Haryana</option>
-                <option value="Punjab">Punjab</option>
-                <option value="Delhi">Delhi</option>
-                <option value="Rajasthan">Rajasthan</option>
-                <option value="Uttar Pradesh">Uttar Pradesh</option>
-            </select>
-        </div>
         <div id="jobList" class="grid"></div>
     </div>
 </section>
 
-<!-- Contact Section -->
+<!-- Contact -->
 <section id="contact">
-    <div class="container">
+    <div class="container" style="text-align:center;">
         <h2>Contact Us</h2>
-        <p style="text-align:center;"><strong>Mobile:</strong> 8168205553</p>
-        <p style="text-align:center;"><strong>Address:</strong> Near Govt. Girls College, Rania</p>
-        
-        <!-- Google Maps (You can replace with your exact location) -->
-        <iframe 
-            src="https://www.google.com/maps?q=Rania,Haryana&output=embed"
-            height="300" loading="lazy">
-        </iframe>
+        <p><strong>Owner:</strong> Sanjay Wajrawat</p>
+        <p><strong>Mobile:</strong> 8168205553</p>
+        <p><strong>Email:</strong> vinjasanjay75@gmail.com</p>
+        <p><strong>Address:</strong> Near Govt. Girls College, Rania, Haryana</p>
+        <iframe src="https://www.google.com/maps?q=Rania,Haryana&output=embed" height="300"></iframe>
     </div>
 </section>
 
 <footer>
-    <p>© 2026 Kiran Photostate & CSC Center | All Rights Reserved</p>
+    <p>© 2026 Kiran Photostate & CSC Center | Designed for Sanjay Wajrawat</p>
 </footer>
 
 <a class="whatsapp" href="https://wa.me/918168205553" target="_blank">💬</a>
@@ -212,44 +204,37 @@
 const jobs = [
     { title: "SSC Recruitment 2026", state: "All India", link: "https://ssc.nic.in" },
     { title: "RRB Group D Recruitment 2026", state: "All India", link: "https://www.rrbcdg.gov.in" },
-    { title: "SBI Clerk Recruitment 2026", state: "All India", link: "https://sbi.co.in" },
     { title: "Haryana Police Recruitment 2026", state: "Haryana", link: "https://hssc.gov.in" },
-    { title: "Delhi Police Recruitment 2026", state: "Delhi", link: "https://delhipolice.gov.in" },
-    { title: "Punjab Patwari Recruitment 2026", state: "Punjab", link: "https://sssb.punjab.gov.in" }
+    { title: "Delhi Police Recruitment 2026", state: "Delhi", link: "https://delhipolice.gov.in" }
 ];
 
-function displayJobs(jobArray) {
-    const jobList = document.getElementById("jobList");
-    jobList.innerHTML = "";
-    jobArray.forEach(job => {
-        jobList.innerHTML += `
+function displayJobs(list) {
+    const container = document.getElementById("jobList");
+    container.innerHTML = "";
+    list.forEach(job => {
+        container.innerHTML += `
             <div class="card">
                 <h3>${job.title}</h3>
                 <p><strong>State:</strong> ${job.state}</p>
-                <a href="${job.link}" target="_blank" 
-                   style="display:inline-block;margin-top:10px;padding:8px 15px;background:#1976d2;color:#fff;border-radius:5px;text-decoration:none;">
-                   Apply Now
-                </a>
+                <a href="${job.link}" target="_blank">Apply Now</a>
             </div>`;
     });
+}
+
+function filterJobs() {
+    const search = document.getElementById("searchInput").value.toLowerCase();
+    const state = document.getElementById("stateFilter").value;
+    const filtered = jobs.filter(job =>
+        job.title.toLowerCase().includes(search) &&
+        (state === "All" || job.state === state)
+    );
+    displayJobs(filtered);
 }
 
 document.getElementById("searchInput").addEventListener("input", filterJobs);
 document.getElementById("stateFilter").addEventListener("change", filterJobs);
 
-function filterJobs() {
-    const search = document.getElementById("searchInput").value.toLowerCase();
-    const state = document.getElementById("stateFilter").value;
-
-    const filtered = jobs.filter(job =>
-        job.title.toLowerCase().includes(search) &&
-        (state === "All" || job.state === state)
-    );
-
-    displayJobs(filtered);
-}
-
-// Load jobs on page load
+// Initial Load
 displayJobs(jobs);
 </script>
 
