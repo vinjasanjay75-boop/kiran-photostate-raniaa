@@ -1,233 +1,291 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kiran Photostate Rania | Online Services & Job Alerts</title>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiran Photostate Rania | No. 1 Job Portal & Online Services</title>
     <style>
         :root {
-            /* Branding Colors */
-            --header-bg: #004d40; /* Dark Teal */
-            --nav-bg: #00796b;
-            --accent: #ff9800; /* Golden Orange */
-            --sidebar-title: #006064;
-            --bg-body: #f1f8e9;
-            --white: #ffffff;
+            --main-blue: #003366;
+            --light-blue: #e3f2fd;
+            --header-yellow: #FFD700;
+            --accent-red: #cc0000;
+            --border-color: #bbdefb;
         }
 
         body {
-            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
-            background-color: var(--bg-body);
-            color: #333;
+            padding: 0;
+            background-color: #f0f2f5;
         }
 
-        /* Full Header Section */
-        .site-header {
-            background-color: var(--header-bg);
-            color: var(--white);
-            padding: 20px 10px;
-            border-bottom: 4px solid var(--accent);
-        }
-
-        .header-main {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-        }
-
-        .brand-box h1 {
-            font-size: 35px;
-            margin: 0;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .contact-bar {
-            font-size: 20px;
-            color: var(--accent);
-            font-weight: bold;
-            margin-top: 5px;
-        }
-
-        /* Navigation Grid */
-        .nav-grid {
-            background: var(--nav-bg);
-            padding: 5px 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 5px;
-        }
-
-        .nav-item {
-            background: var(--white);
-            color: var(--header-bg);
-            padding: 8px 15px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 4px;
-            font-size: 14px;
-            transition: 0.3s;
-        }
-
-        .nav-item:hover {
-            background: var(--accent);
-            color: var(--white);
-        }
-
-        /* Main Content Layout (Sidebar + Content) */
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .sidebar {
-            flex: 1;
-            min-width: 250px;
-            background: var(--white);
-            border: 1px solid #ddd;
-        }
-
-        .main-content {
-            flex: 3;
-            min-width: 300px;
-        }
-
-        .sb-heading {
-            background: var(--sidebar-title);
+        /* Top Header Section */
+        .top-header {
+            background: linear-gradient(90deg, var(--main-blue), #00509d);
             color: white;
-            padding: 10px;
-            font-size: 18px;
-            font-weight: bold;
+            padding: 20px 0;
             text-align: center;
+            border-bottom: 4px solid var(--header-yellow);
         }
 
-        .sb-list {
-            list-style: none;
-            padding: 10px;
+        .top-header h1 {
+            margin: 0;
+            font-size: 45px;
+            letter-spacing: 2px;
+            text-shadow: 3px 3px 5px rgba(0,0,0,0.5);
         }
 
-        .sb-list li {
-            padding: 8px 0;
-            border-bottom: 1px dashed #ccc;
+        .contact-header {
+            font-size: 24px;
+            color: var(--header-yellow);
+            margin-top: 5px;
+            font-weight: bold;
         }
 
-        .sb-list li a {
-            text-decoration: none;
-            color: #004d40;
-            font-weight: 500;
-        }
-
-        /* Job Table Grid (The Feature You Wanted) */
-        .job-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 15px;
-        }
-
-        .job-box {
-            background: var(--white);
-            border: 1px solid #00796b;
-            border-radius: 4px;
+        /* News Ticker (Chalti hui news) */
+        .ticker-wrap {
+            background: #222;
+            color: #fff;
+            padding: 10px 0;
             overflow: hidden;
         }
 
-        .job-box-title {
-            background: #00796b;
+        .ticker {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 20s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Navigation Menu */
+        .main-nav {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .nav-inner a {
+            padding: 15px 20px;
+            text-decoration: none;
+            color: var(--main-blue);
+            font-weight: bold;
+            border-right: 1px solid #eee;
+            transition: 0.3s;
+        }
+
+        .nav-inner a:hover {
+            background: var(--main-blue);
+            color: white;
+        }
+
+        /* Layout Grid */
+        .main-container {
+            max-width: 1300px;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: 250px 1fr 250px;
+            gap: 15px;
+            padding: 0 10px;
+        }
+
+        /* Sidebars */
+        .sidebar {
+            background: #fff;
+            border: 1px solid var(--border-color);
+        }
+
+        .sb-title {
+            background: var(--main-blue);
             color: white;
             padding: 10px;
             text-align: center;
             font-weight: bold;
+            font-size: 16px;
         }
 
-        .job-links {
+        .sb-links a {
+            display: block;
             padding: 10px;
+            color: #333;
+            text-decoration: none;
+            border-bottom: 1px solid #f0f0f0;
             font-size: 14px;
         }
 
+        .sb-links a:hover {
+            background: var(--light-blue);
+            padding-left: 15px;
+        }
+
+        /* Central Table Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .job-box {
+            background: #fff;
+            border: 2px solid var(--main-blue);
+        }
+
+        .box-header {
+            background: var(--main-blue);
+            color: white;
+            padding: 8px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .box-body {
+            padding: 10px;
+            height: 250px;
+            overflow-y: auto;
+        }
+
+        .box-body ul {
+            padding-left: 20px;
+        }
+
+        .box-body li {
+            margin-bottom: 8px;
+            color: var(--accent-red);
+            font-weight: bold;
+        }
+
         /* Mobile View */
-        @media (max-width: 768px) {
-            .container { flex-direction: column; }
-            .brand-box h1 { font-size: 24px; }
-            .header-main { flex-direction: column; text-align: center; }
+        @media (max-width: 1024px) {
+            .main-container {
+                grid-template-columns: 1fr;
+            }
+            .sidebar { display: none; }
+            .content-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-<header class="site-header">
-    <div class="header-main">
-        <div class="brand-box">
-            <h1>KIRAN PHOTOSTATE RANIA</h1>
-            <div class="contact-bar">📞 Mobile: 8168205553</div>
-        </div>
-    </div>
+<header class="top-header">
+    <h1>KIRAN PHOTOSTATE RANIA</h1>
+    <div class="contact-header">📞 Mob: 8168205553 | Best Online Service Center</div>
 </header>
 
-<nav class="nav-grid">
-    <a href="#" class="nav-item">HOME</a>
-    <a href="#" class="nav-item">LATEST JOBS</a>
-    <a href="#" class="nav-item">ADMIT CARD</a>
-    <a href="#" class="nav-item">RESULTS</a>
-    <a href="#" class="nav-item">ADMISSION</a>
-    <a href="#" class="nav-item">CONTACT US</a>
+<div class="ticker-wrap">
+    <div class="ticker">
+        NEW: HSSC CET Group C Forms Open... | SSC MTS Result 2026 Declared... | Railway New Vacancy 2026 Apply Online... | Visit Kiran Photostate Rania for Fast Form Filling!
+    </div>
+</div>
+
+<nav class="main-nav">
+    <div class="nav-inner">
+        <a href="#">Home</a>
+        <a href="#">Latest Jobs</a>
+        <a href="#">Admit Card</a>
+        <a href="#">Results</a>
+        <a href="#">Syllabus</a>
+        <a href="#">Answer Key</a>
+        <a href="#">Admission</a>
+        <a href="#">Scholarship</a>
+    </div>
 </nav>
 
-<div class="container">
+<div class="main-container">
     <aside class="sidebar">
-        <div class="sb-heading">OFFLINE FORMS</div>
-        <ul class="sb-list">
-            <li><a href="#">Army Recruitment 2026</a></li>
-            <li><a href="#">Haryana Police Form</a></li>
-            <li><a href="#">Railway Group D</a></li>
-            <li><a href="#">SSC CGL Online</a></li>
-        </ul>
-        
-        <div class="sb-heading" style="background:var(--accent)">SERVICES</div>
-        <ul class="sb-list">
-            <li><a href="#">Photostat & Lamination</a></li>
-            <li><a href="#">Color Printing</a></li>
-            <li><a href="#">Passport Size Photo</a></li>
-            <li><a href="#">PAN Card / Voter ID</a></li>
-        </ul>
+        <div class="sb-title">JOBS BY STATE</div>
+        <div class="sb-links">
+            <a href="#">Haryana Jobs</a>
+            <a href="#">Punjab Jobs</a>
+            <a href="#">Delhi Jobs</a>
+            <a href="#">Rajasthan Jobs</a>
+            <a href="#">UP Jobs</a>
+        </div>
+        <div class="sb-title" style="margin-top:20px; background:var(--accent-red);">OUR SERVICES</div>
+        <div class="sb-links">
+            <a href="#">Online Form Filling</a>
+            <a href="#">Passport Photo</a>
+            <a href="#">Lamination</a>
+            <a href="#">Color Printouts</a>
+            <a href="#">PVC Card Print</a>
+        </div>
     </aside>
 
-    <main class="main-content">
-        <div class="job-grid">
+    <main class="content-area">
+        <div class="content-grid">
             <div class="job-box">
-                <div class="job-box-title">LATEST ANNOUNCEMENTS</div>
-                <div class="job-links">
+                <div class="box-header">LATEST NOTIFICATIONS</div>
+                <div class="box-body">
                     <ul>
-                        <li><a href="#">HSSC New Vacancy Update</a></li>
-                        <li><a href="#">SSC MTS Result Out</a></li>
-                        <li><a href="#">IBPS Clerk Admit Card</a></li>
+                        <li>HSSC Clerk New Vacancy 2026</li>
+                        <li>SSC CGL Tier 1 Results</li>
+                        <li>UPSC Civil Services Notification</li>
+                        <li>Haryana Police Constable List</li>
                     </ul>
                 </div>
             </div>
-
             <div class="job-box">
-                <div class="job-box-title" style="background: #d84315;">IMPORTANT LINKS</div>
-                <div class="job-links">
+                <div class="box-header" style="background:var(--accent-red);">ADMIT CARDS</div>
+                <div class="box-body">
                     <ul>
-                        <li><a href="#">Apply for CSC Services</a></li>
-                        <li><a href="#">Check Ration Card Status</a></li>
-                        <li><a href="#">Family ID Update</a></li>
+                        <li>IBPS PO Mains Admit Card</li>
+                        <li>Railway ALP Exam Date</li>
+                        <li>HTET Admit Card 2026</li>
+                        <li>NTA NEET Admit Card</li>
                     </ul>
                 </div>
             </div>
-        </div>
-
-        <div style="margin-top:20px; background:white; padding:15px; border:1px solid #ccc;">
-            <h2 style="color:var(--header-bg)">About Kiran Photostate</h2>
-            <p>Welcome to Kiran Photostate Rania. We provide all types of online services, form filling, and high-quality printing solutions.</p>
+            <div class="job-box">
+                <div class="box-header" style="background:#2e7d32;">RESULTS</div>
+                <div class="box-body">
+                    <ul>
+                        <li>SSC GD Final Result</li>
+                        <li>HPSC PGT Results 2026</li>
+                        <li>HBSE 10th/12th Re-appear</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="job-box">
+                <div class="box-header" style="background:#827717;">ADMISSIONS</div>
+                <div class="box-body">
+                    <ul>
+                        <li>ITI Haryana Admission</li>
+                        <li>B.Ed Counseling 2026</li>
+                        <li>KUK University Admission</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </main>
+
+    <aside class="sidebar">
+        <div class="sb-title">IMPORTANT LINKS</div>
+        <div class="sb-links">
+            <a href="#">Check Family ID</a>
+            <a href="#">Download Voter ID</a>
+            <a href="#">Ration Card Status</a>
+            <a href="#">Old Age Pension</a>
+            <a href="#">CSC Services</a>
+        </div>
+    </aside>
 </div>
+
+<footer style="background:var(--main-blue); color:white; text-align:center; padding:20px; margin-top:30px;">
+    <p>&copy; 2026 Kiran Photostate Rania. Designed for Excellence.</p>
+    <p>Contact: 8168205553 | Address: Main Bazar, Rania</p>
+</footer>
 
 </body>
 </html>
