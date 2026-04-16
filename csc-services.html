@@ -16,9 +16,9 @@
             margin: 0;
             padding: 0;
             background-color: var(--light-bg);
+            line-height: 1.6;
         }
 
-        /* Header Section */
         .header {
             background: var(--csc-blue);
             color: white;
@@ -28,127 +28,166 @@
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 20px auto;
             padding: 20px;
         }
 
-        /* Services Grid Layout */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
-            margin-top: 20px;
         }
 
         .service-card {
             background: white;
-            padding: 25px;
-            text-align: center;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            transition: 0.3s;
-            border-top: 4px solid var(--csc-blue);
-        }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            border-top-color: var(--csc-orange);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-left: 5px solid var(--csc-orange);
         }
 
         .service-card h3 {
             color: var(--csc-blue);
-            margin-bottom: 10px;
-            font-size: 20px;
+            margin-top: 0;
         }
 
-        .service-card p {
-            color: #555;
-            font-size: 14px;
-            line-height: 1.5;
-        }
-
-        /* Back to Home Button */
-        .btn-container {
-            text-align: center;
-            margin-top: 50px;
-        }
-
-        .btn-home {
+        .link-btn {
             display: inline-block;
             background: var(--csc-blue);
             color: white;
-            padding: 15px 35px;
+            padding: 8px 15px;
             text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 18px;
-            box-shadow: 0 4px 15px rgba(34, 61, 143, 0.3);
-            transition: 0.3s;
-        }
-
-        .btn-home:hover {
-            background: var(--csc-orange);
-            transform: scale(1.05);
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            color: #777;
+            border-radius: 5px;
             font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .link-btn:hover { background: #1a2e6d; }
+
+        /* Steps Section */
+        .apply-steps {
+            background: #fff;
+            padding: 25px;
+            margin-top: 40px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .apply-steps h2 {
+            color: var(--csc-orange);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .step-item {
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 3px solid var(--csc-blue);
+        }
+
+        .step-item strong { color: var(--csc-blue); display: block; font-size: 18px; }
+
+        .btn-home {
+            display: inline-block;
+            background: #333;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
 
 <header class="header">
-    <h1>KIRAN PHOTOSTATE & CSC CENTER</h1>
-    <p>Apki Sabhi Online Suvidhaon Ka Ek Hi Thikana</p>
+    <h1>CSC DIGITAL SEVA SERVICES</h1>
+    <p>Kiran Photostate Rania - Official Links & Apply Guide</p>
 </header>
 
 <div class="container">
-    <h2 style="text-align:center; color:#333;">Our CSC Digital Services</h2>
     
     <div class="services-grid">
         <div class="service-card">
-            <h3>💳 PAN Card</h3>
-            <p>Naya PAN Card banwayein ya purane mein correction karwayein (NSDL/UTI).</p>
+            <h3>💳 PAN Card Service</h3>
+            <p>Naya PAN Card apply karein ya correction karein.</p>
+            <a href="https://www.onlineservices.nsdl.com/paam/endUserRegisterContact.html" target="_blank" class="link-btn">Apply NSDL PAN</a>
+            <a href="https://www.pan.utiitsl.com/PAN/" target="_blank" class="link-btn">Apply UTI PAN</a>
         </div>
 
         <div class="service-card">
             <h3>⚡ Electricity Bill</h3>
-            <p>Bijli ke bill bharein aur receipt turant prapt karein.</p>
+            <p>Haryana Bijli Bill (DHBVN) online bharein.</p>
+            <a href="https://epayment.dhbvn.org.in/" target="_blank" class="link-btn">Pay DHBVN Bill</a>
         </div>
 
         <div class="service-card">
-            <h3>🏦 AEPS (Banking)</h3>
-            <p>Aadhaar Card se paise nikalein, Balance check karein aur Mini Statement payein.</p>
+            <h3>🏥 Ayushman Bharat</h3>
+            <p>5 Lakh muft ilaj wala card list check karein.</p>
+            <a href="https://beneficiary.nha.gov.in/" target="_blank" class="link-btn">Ayushman Portal</a>
         </div>
 
         <div class="service-card">
-            <h3>📄 Ayushman Card</h3>
-            <p>5 Lakh tak ka muft ilaj wala card yahan banwayein.</p>
+            <h3>🛂 Passport Service</h3>
+            <p>Naya Passport apply karne ke liye registration karein.</p>
+            <a href="https://www.passportindia.gov.in/" target="_blank" class="link-btn">Passport Seva Link</a>
         </div>
 
         <div class="service-card">
-            <h3>🚲 Insurance</h3>
-            <p>Two Wheeler, Four Wheeler aur Health Insurance turant payein.</p>
+            <h3>🆔 Voter Services</h3>
+            <p>Voter ID Card download ya naya apply karein.</p>
+            <a href="https://voters.eci.gov.in/" target="_blank" class="link-btn">Voter Portal</a>
         </div>
 
         <div class="service-card">
-            <h3>🎟️ Ticket Booking</h3>
-            <p>Railway (IRCTC), Flight aur Bus ki confirmed ticket booking.</p>
+            <h3>🏦 DigiPay / Banking</h3>
+            <p>Aadhaar se paise nikalne ki official jankari.</p>
+            <a href="https://digipay.csccloud.in/" target="_blank" class="link-btn">DigiPay Info</a>
         </div>
     </div>
 
-    <div class="btn-container">
-        <a href="index.html" class="btn-home">⬅️ BACK TO HOME</a>
+    <div class="apply-steps">
+        <h2>📝 Kaise Apply Karein? (Step-by-Step Guide)</h2>
+
+        <div class="step-item">
+            <strong>Step 1: Document Taiyar Karein</strong>
+            <p>Sabse pehle zaruri documents scan karke rakhlein (Aadhaar, Photo, Signature aur Marksheet). File ka size 200kb se kam rakhein.</p>
+        </div>
+
+        <div class="step-item">
+            <strong>Step 2: Official Link Par Jayein</strong>
+            <p>Upar diye gaye list mein se jo service aapko chahiye uske "Link" par click karein. Ye aapko official govt website par le jayega.</p>
+        </div>
+
+        <div class="step-item">
+            <strong>Step 3: Registration / Login</strong>
+            <p>Website khulne ke baad 'New Registration' par click karein aur apna Mobile Number daalkar OTP se verify karein.</p>
+        </div>
+
+        <div class="step-item">
+            <strong>Step 4: Form Bharna Start Karein</strong>
+            <p>Apni saari detail (Naam, Pita ka naam, DOB) documents ke hisaab se dhayan se bharein. Koi bhi galati na karein.</p>
+        </div>
+
+        <div class="step-item">
+            <strong>Step 5: Fees Payment</strong>
+            <p>Agar service ki koi govt fee hai, toh use UPI, Net Banking ya ATM card se pay karein. Payment hone ke baad page ko refresh na karein.</p>
+        </div>
+
+        <div class="step-item">
+            <strong>Step 6: Final Printout</strong>
+            <p>Form submit hone ke baad "Acknowledgement Receipt" download karein. Aap hamari shop **Kiran Photostate Rania** par aakar iska print nikalwa sakte hain.</p>
+        </div>
     </div>
+
+    <center>
+        <a href="index.html" class="btn-home">⬅️ WAPIS HOME PAR JAYEIN</a>
+    </center>
 </div>
 
 <footer>
-    <p>&copy; 2026 Kiran Photostate Rania | CSC Services Portal</p>
+    <p style="text-align:center; padding:20px;">&copy; 2026 Kiran Photostate Rania | Authorized CSC Center</p>
 </footer>
 
 </body>
