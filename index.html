@@ -1,201 +1,233 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kiran Photostate & CSC Center - Rania</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kiran Photostate Rania | Online Services & Job Alerts</title>
+    
     <style>
-        body {margin:0;font-family:'Poppins',sans-serif;background:#f5f6fa;}
-        header {background:#0d47a1;color:#fff;padding:15px 0;position:sticky;top:0;z-index:1000;}
-        .container {width:90%;margin:auto;max-width:1200px;}
-        .logo {text-align:center;font-size:28px;font-weight:600;}
-        nav {text-align:center;margin-top:10px;}
-        nav a {color:#fff;margin:0 12px;text-decoration:none;font-weight:500;}
-        nav a:hover {text-decoration:underline;}
-        .hero {background:linear-gradient(45deg,#1976d2,#42a5f5);color:#fff;text-align:center;padding:60px 20px;}
-        .notice {background:#ffeb3b;padding:10px;font-weight:600;text-align:center;}
-        section {padding:50px 0;}
-        h2 {text-align:center;color:#0d47a1;margin-bottom:30px;}
-        .grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;}
-        .card {background:#fff;padding:20px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,0.1);transition:0.3s;text-align:center;}
-        .card:hover {transform:translateY(-5px);}
-        .search-box {text-align:center;margin-bottom:20px;}
-        .search-box input,.search-box select {padding:10px;margin:5px;border:1px solid #ccc;border-radius:5px;}
-        form {max-width:600px;margin:auto;}
-        form input,form textarea,form select {width:100%;padding:10px;margin:10px 0;border:1px solid #ccc;border-radius:5px;}
-        form button {background:#1976d2;color:#fff;padding:10px 20px;border:none;border-radius:5px;cursor:pointer;}
-        footer {background:#0d47a1;color:#fff;text-align:center;padding:20px;}
-        .whatsapp {position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:15px;border-radius:50%;text-decoration:none;font-size:22px;}
-        iframe {width:100%;border:0;border-radius:10px;}
-        .visitor {margin-top:10px;font-size:14px;}
+        :root {
+            /* Branding Colors */
+            --header-bg: #004d40; /* Dark Teal */
+            --nav-bg: #00796b;
+            --accent: #ff9800; /* Golden Orange */
+            --sidebar-title: #006064;
+            --bg-body: #f1f8e9;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+            margin: 0;
+            background-color: var(--bg-body);
+            color: #333;
+        }
+
+        /* Full Header Section */
+        .site-header {
+            background-color: var(--header-bg);
+            color: var(--white);
+            padding: 20px 10px;
+            border-bottom: 4px solid var(--accent);
+        }
+
+        .header-main {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .brand-box h1 {
+            font-size: 35px;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .contact-bar {
+            font-size: 20px;
+            color: var(--accent);
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        /* Navigation Grid */
+        .nav-grid {
+            background: var(--nav-bg);
+            padding: 5px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .nav-item {
+            background: var(--white);
+            color: var(--header-bg);
+            padding: 8px 15px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .nav-item:hover {
+            background: var(--accent);
+            color: var(--white);
+        }
+
+        /* Main Content Layout (Sidebar + Content) */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .sidebar {
+            flex: 1;
+            min-width: 250px;
+            background: var(--white);
+            border: 1px solid #ddd;
+        }
+
+        .main-content {
+            flex: 3;
+            min-width: 300px;
+        }
+
+        .sb-heading {
+            background: var(--sidebar-title);
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .sb-list {
+            list-style: none;
+            padding: 10px;
+        }
+
+        .sb-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #ccc;
+        }
+
+        .sb-list li a {
+            text-decoration: none;
+            color: #004d40;
+            font-weight: 500;
+        }
+
+        /* Job Table Grid (The Feature You Wanted) */
+        .job-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+
+        .job-box {
+            background: var(--white);
+            border: 1px solid #00796b;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .job-box-title {
+            background: #00796b;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .job-links {
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        /* Mobile View */
+        @media (max-width: 768px) {
+            .container { flex-direction: column; }
+            .brand-box h1 { font-size: 24px; }
+            .header-main { flex-direction: column; text-align: center; }
+        }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="container">
-        <div class="logo">Kiran Photostate & CSC Center<br><small>Sanjay Wajrawat</small></div>
-        <nav>
-            <a href="#services">CSC Services</a>
-            <a href="#bank">Banking</a>
-            <a href="#jobs">Jobs</a>
-            <a href="#apply">Apply Online</a>
-            <a href="#contact">Contact</a>
-        </nav>
+<header class="site-header">
+    <div class="header-main">
+        <div class="brand-box">
+            <h1>KIRAN PHOTOSTATE RANIA</h1>
+            <div class="contact-bar">📞 Mobile: 8168205553</div>
+        </div>
     </div>
 </header>
 
-<div class="notice">
-    <marquee>📢 Latest Updates: SSC | Railway | Banking | State Government Jobs Available | Visit Our Center for All CSC & Banking Services</marquee>
+<nav class="nav-grid">
+    <a href="#" class="nav-item">HOME</a>
+    <a href="#" class="nav-item">LATEST JOBS</a>
+    <a href="#" class="nav-item">ADMIT CARD</a>
+    <a href="#" class="nav-item">RESULTS</a>
+    <a href="#" class="nav-item">ADMISSION</a>
+    <a href="#" class="nav-item">CONTACT US</a>
+</nav>
+
+<div class="container">
+    <aside class="sidebar">
+        <div class="sb-heading">OFFLINE FORMS</div>
+        <ul class="sb-list">
+            <li><a href="#">Army Recruitment 2026</a></li>
+            <li><a href="#">Haryana Police Form</a></li>
+            <li><a href="#">Railway Group D</a></li>
+            <li><a href="#">SSC CGL Online</a></li>
+        </ul>
+        
+        <div class="sb-heading" style="background:var(--accent)">SERVICES</div>
+        <ul class="sb-list">
+            <li><a href="#">Photostat & Lamination</a></li>
+            <li><a href="#">Color Printing</a></li>
+            <li><a href="#">Passport Size Photo</a></li>
+            <li><a href="#">PAN Card / Voter ID</a></li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+        <div class="job-grid">
+            <div class="job-box">
+                <div class="job-box-title">LATEST ANNOUNCEMENTS</div>
+                <div class="job-links">
+                    <ul>
+                        <li><a href="#">HSSC New Vacancy Update</a></li>
+                        <li><a href="#">SSC MTS Result Out</a></li>
+                        <li><a href="#">IBPS Clerk Admit Card</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="job-box">
+                <div class="job-box-title" style="background: #d84315;">IMPORTANT LINKS</div>
+                <div class="job-links">
+                    <ul>
+                        <li><a href="#">Apply for CSC Services</a></li>
+                        <li><a href="#">Check Ration Card Status</a></li>
+                        <li><a href="#">Family ID Update</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top:20px; background:white; padding:15px; border:1px solid #ccc;">
+            <h2 style="color:var(--header-bg)">About Kiran Photostate</h2>
+            <p>Welcome to Kiran Photostate Rania. We provide all types of online services, form filling, and high-quality printing solutions.</p>
+        </div>
+    </main>
 </div>
-
-<section class="hero">
-    <h1>Welcome to Kiran Photostate & CSC Center</h1>
-    <p>All CSC, Banking & Government Job Services at One Place</p>
-</section>
-
-<!-- CSC Services -->
-<section id="services">
-    <div class="container">
-        <h2>CSC Services</h2>
-        <div class="grid">
-            <div class="card">PAN Card Apply</div>
-            <div class="card">Aadhaar Update</div>
-            <div class="card">Voter ID</div>
-            <div class="card">Ayushman Bharat Card</div>
-            <div class="card">Ration Card</div>
-            <div class="card">Birth & Death Certificate</div>
-            <div class="card">Electricity/Water/Gas Bill Payment</div>
-            <div class="card">Insurance Services</div>
-        </div>
-    </div>
-</section>
-
-<!-- Banking Services -->
-<section id="bank">
-    <div class="container">
-        <h2>Banking Services</h2>
-        <div class="grid">
-            <div class="card">Money Transfer</div>
-            <div class="card">AEPS Cash Withdrawal</div>
-            <div class="card">Mini Statement</div>
-            <div class="card">Account Opening</div>
-            <div class="card">PMJJBY / PMSBY</div>
-            <div class="card">Atal Pension Yojana</div>
-        </div>
-    </div>
-</section>
-
-<!-- Job Section -->
-<section id="jobs">
-    <div class="container">
-        <h2>Latest Government Jobs</h2>
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Search Jobs...">
-            <select id="stateFilter">
-                <option value="All">All States</option>
-                <option value="All India">All India</option>
-                <option value="Haryana">Haryana</option>
-                <option value="Punjab">Punjab</option>
-                <option value="Delhi">Delhi</option>
-                <option value="Rajasthan">Rajasthan</option>
-                <option value="Uttar Pradesh">Uttar Pradesh</option>
-            </select>
-        </div>
-        <div id="jobList" class="grid"></div>
-    </div>
-</section>
-
-<!-- Online Form -->
-<section id="apply">
-    <div class="container">
-        <h2>Apply for CSC / Banking Services</h2>
-        <form action="https://formsubmit.co/vinjasanjay75@gmail.com" method="POST" enctype="multipart/form-data">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="tel" name="phone" placeholder="Mobile Number" required>
-            <select name="service" required>
-                <option value="">Select Service</option>
-                <option>PAN Card</option>
-                <option>Aadhaar Update</option>
-                <option>Money Transfer</option>
-                <option>AEPS Withdrawal</option>
-                <option>Other</option>
-            </select>
-            <input type="file" name="document">
-            <textarea name="message" placeholder="Additional Details"></textarea>
-            <button type="submit">Submit Application</button>
-        </form>
-    </div>
-</section>
-
-<!-- Contact -->
-<section id="contact">
-    <div class="container" style="text-align:center;">
-        <h2>Contact Us</h2>
-        <p><strong>Owner:</strong> Sanjay Wajrawat</p>
-        <p><strong>Mobile:</strong> 8168205553</p>
-        <p><strong>Email:</strong> vinjasanjay75@gmail.com</p>
-        <p><strong>Address:</strong> Near Govt. Girls College, Rania, Haryana</p>
-        <iframe src="https://www.google.com/maps?q=Rania,Haryana&output=embed" height="300" loading="lazy"></iframe>
-    </div>
-</section>
-
-<footer>
-    <p>© 2026 Kiran Photostate & CSC Center | Designed for Sanjay Wajrawat</p>
-    <div class="visitor">
-        Visitors: <span id="visitorCount">0</span>
-    </div>
-</footer>
-
-<a class="whatsapp" href="https://wa.me/918168205553" target="_blank">💬</a>
-
-<script>
-const jobs = [
-    { title: "SSC Recruitment 2026", state: "All India", link: "https://ssc.nic.in" },
-    { title: "RRB Group D Recruitment 2026", state: "All India", link: "https://www.rrbcdg.gov.in" },
-    { title: "SBI Clerk Recruitment 2026", state: "All India", link: "https://sbi.co.in" },
-    { title: "Haryana Police Recruitment 2026", state: "Haryana", link: "https://hssc.gov.in" },
-    { title: "Delhi Police Recruitment 2026", state: "Delhi", link: "https://delhipolice.gov.in" },
-    { title: "Punjab Patwari Recruitment 2026", state: "Punjab", link: "https://sssb.punjab.gov.in" }
-];
-
-function displayJobs(list) {
-    const container = document.getElementById("jobList");
-    container.innerHTML = "";
-    list.forEach(job => {
-        container.innerHTML += `
-            <div class="card">
-                <h3>${job.title}</h3>
-                <p><strong>State:</strong> ${job.state}</p>
-                <a href="${job.link}" target="_blank">Apply Now</a>
-            </div>`;
-    });
-}
-
-function filterJobs() {
-    const search = document.getElementById("searchInput").value.toLowerCase();
-    const state = document.getElementById("stateFilter").value;
-    const filtered = jobs.filter(job =>
-        job.title.toLowerCase().includes(search) &&
-        (state === "All" || job.state === state)
-    );
-    displayJobs(filtered);
-}
-
-document.getElementById("searchInput").addEventListener("input", filterJobs);
-document.getElementById("stateFilter").addEventListener("change", filterJobs);
-
-// Initial Load
-displayJobs(jobs);
-
-// Visitor Counter
-let count = localStorage.getItem('visitorCount') || 0;
-count++;
-localStorage.setItem('visitorCount', count);
-document.getElementById('visitorCount').innerText = count;
-</script>
 
 </body>
 </html>
