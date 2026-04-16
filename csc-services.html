@@ -3,191 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSC Digital Seva Services | Kiran Photostate Rania</title>
+    <title>CSC Detailed Services Guide | Kiran Photostate Rania</title>
     <style>
         :root {
-            --csc-blue: #223d8f;
-            --csc-orange: #f37021;
-            --light-bg: #f8f9fa;
+            --primary: #223d8f;
+            --secondary: #f37021;
+            --success: #28a745;
+            --bg: #f4f7f6;
         }
 
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--light-bg);
-            line-height: 1.6;
-        }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: var(--bg); color: #333; line-height: 1.6; }
+        
+        .header { background: var(--primary); color: white; padding: 30px; text-align: center; border-bottom: 5px solid var(--secondary); }
+        
+        .container { max-width: 1000px; margin: 20px auto; padding: 15px; }
 
-        .header {
-            background: var(--csc-blue);
-            color: white;
-            padding: 30px 10px;
-            text-align: center;
-            border-bottom: 5px solid var(--csc-orange);
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 20px auto;
-            padding: 20px;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .service-card {
+        /* Service Block Styling */
+        .service-block {
             background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            border-left: 5px solid var(--csc-orange);
-        }
-
-        .service-card h3 {
-            color: var(--csc-blue);
-            margin-top: 0;
-        }
-
-        .link-btn {
-            display: inline-block;
-            background: var(--csc-blue);
-            color: white;
-            padding: 8px 15px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 14px;
-            margin-top: 10px;
-        }
-
-        .link-btn:hover { background: #1a2e6d; }
-
-        /* Steps Section */
-        .apply-steps {
-            background: #fff;
-            padding: 25px;
-            margin-top: 40px;
-            border-radius: 10px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
             border: 1px solid #ddd;
         }
 
-        .apply-steps h2 {
-            color: var(--csc-orange);
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-        }
-
-        .step-item {
-            margin-bottom: 20px;
-            padding-left: 15px;
-            border-left: 3px solid var(--csc-blue);
-        }
-
-        .step-item strong { color: var(--csc-blue); display: block; font-size: 18px; }
-
-        .btn-home {
-            display: inline-block;
-            background: #333;
+        .block-title {
+            background: var(--primary);
             color: white;
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 30px;
-            margin-top: 30px;
+            padding: 15px 20px;
+            font-size: 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
+
+        .guidance-box { padding: 20px; }
+        
+        .steps { background: #fff9f0; border-left: 5px solid var(--secondary); padding: 15px; margin: 15px 0; }
+        
+        .doc-list { background: #f0f4ff; padding: 15px; border-radius: 8px; margin-bottom: 15px; }
+
+        .action-links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 15px; }
+
+        .btn {
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .btn-apply { background: var(--success); }
+        .btn-check { background: var(--secondary); }
+        .btn-home { background: #333; display: block; width: 200px; margin: 40px auto; text-align: center; }
+
+        .btn:hover { opacity: 0.9; transform: scale(1.02); }
+
+        h4 { margin-top: 0; color: var(--primary); }
     </style>
 </head>
 <body>
 
 <header class="header">
-    <h1>CSC DIGITAL SEVA SERVICES</h1>
-    <p>Kiran Photostate Rania - Official Links & Apply Guide</p>
+    <h1>DIGITAL SEVA PORTAL - FULL GUIDANCE</h1>
+    <p>Kiran Photostate Rania: Har Step Par Aapki Madad</p>
 </header>
 
 <div class="container">
-    
-    <div class="services-grid">
-        <div class="service-card">
-            <h3>💳 PAN Card Service</h3>
-            <p>Naya PAN Card apply karein ya correction karein.</p>
-            <a href="https://www.onlineservices.nsdl.com/paam/endUserRegisterContact.html" target="_blank" class="link-btn">Apply NSDL PAN</a>
-            <a href="https://www.pan.utiitsl.com/PAN/" target="_blank" class="link-btn">Apply UTI PAN</a>
-        </div>
 
-        <div class="service-card">
-            <h3>⚡ Electricity Bill</h3>
-            <p>Haryana Bijli Bill (DHBVN) online bharein.</p>
-            <a href="https://epayment.dhbvn.org.in/" target="_blank" class="link-btn">Pay DHBVN Bill</a>
-        </div>
-
-        <div class="service-card">
-            <h3>🏥 Ayushman Bharat</h3>
-            <p>5 Lakh muft ilaj wala card list check karein.</p>
-            <a href="https://beneficiary.nha.gov.in/" target="_blank" class="link-btn">Ayushman Portal</a>
-        </div>
-
-        <div class="service-card">
-            <h3>🛂 Passport Service</h3>
-            <p>Naya Passport apply karne ke liye registration karein.</p>
-            <a href="https://www.passportindia.gov.in/" target="_blank" class="link-btn">Passport Seva Link</a>
-        </div>
-
-        <div class="service-card">
-            <h3>🆔 Voter Services</h3>
-            <p>Voter ID Card download ya naya apply karein.</p>
-            <a href="https://voters.eci.gov.in/" target="_blank" class="link-btn">Voter Portal</a>
-        </div>
-
-        <div class="service-card">
-            <h3>🏦 DigiPay / Banking</h3>
-            <p>Aadhaar se paise nikalne ki official jankari.</p>
-            <a href="https://digipay.csccloud.in/" target="_blank" class="link-btn">DigiPay Info</a>
+    <div class="service-block">
+        <div class="block-title">💳 PAN Card (New/Correction)</div>
+        <div class="guidance-box">
+            <div class="doc-list">
+                <h4>📂 Jaruri Documents:</h4>
+                Aadhaar Card (Mobile Number Link hona chahiye), 2 Passport Photos, Signature.
+            </div>
+            <div class="steps">
+                <h4>📝 Step-by-Step Guide:</h4>
+                1. NSDL ya UTI portal par jayein.<br>
+                2. Form 49A (New) ya Correction Form select karein.<br>
+                3. Apni basic details (Name, DOB, Father Name) bharein.<br>
+                4. Fees (₹107) pay karein.<br>
+                5. Aadhaar OTP se E-KYC karein.
+            </div>
+            <div class="action-links">
+                <a href="https://www.onlineservices.nsdl.com/paam/endUserRegisterContact.html" target="_blank" class="btn btn-apply">NSDL Apply Link</a>
+                <a href="https://www.pan.utiitsl.com/PAN/mainform.html" target="_blank" class="btn btn-check">UTI Apply Link</a>
+            </div>
         </div>
     </div>
 
-    <div class="apply-steps">
-        <h2>📝 Kaise Apply Karein? (Step-by-Step Guide)</h2>
-
-        <div class="step-item">
-            <strong>Step 1: Document Taiyar Karein</strong>
-            <p>Sabse pehle zaruri documents scan karke rakhlein (Aadhaar, Photo, Signature aur Marksheet). File ka size 200kb se kam rakhein.</p>
-        </div>
-
-        <div class="step-item">
-            <strong>Step 2: Official Link Par Jayein</strong>
-            <p>Upar diye gaye list mein se jo service aapko chahiye uske "Link" par click karein. Ye aapko official govt website par le jayega.</p>
-        </div>
-
-        <div class="step-item">
-            <strong>Step 3: Registration / Login</strong>
-            <p>Website khulne ke baad 'New Registration' par click karein aur apna Mobile Number daalkar OTP se verify karein.</p>
-        </div>
-
-        <div class="step-item">
-            <strong>Step 4: Form Bharna Start Karein</strong>
-            <p>Apni saari detail (Naam, Pita ka naam, DOB) documents ke hisaab se dhayan se bharein. Koi bhi galati na karein.</p>
-        </div>
-
-        <div class="step-item">
-            <strong>Step 5: Fees Payment</strong>
-            <p>Agar service ki koi govt fee hai, toh use UPI, Net Banking ya ATM card se pay karein. Payment hone ke baad page ko refresh na karein.</p>
-        </div>
-
-        <div class="step-item">
-            <strong>Step 6: Final Printout</strong>
-            <p>Form submit hone ke baad "Acknowledgement Receipt" download karein. Aap hamari shop **Kiran Photostate Rania** par aakar iska print nikalwa sakte hain.</p>
+    <div class="service-block">
+        <div class="block-title">🏥 Ayushman Bharat (Golden Card)</div>
+        <div class="guidance-box">
+            <div class="doc-list">
+                <h4>📂 Jaruri Documents:</h4>
+                Family ID (PPP) ya Ration Card, Aadhaar Card.
+            </div>
+            <div class="steps">
+                <h4>📝 Step-by-Step Guide:</h4>
+                1. Beneficiary Portal open karein.<br>
+                2. Apna Mobile Number daalkar Login karein.<br>
+                3. Family ID number daalkar list mein apna naam check karein.<br>
+                4. Agar 'E-KYC' likha hai, toh Aadhaar OTP se verify karein.<br>
+                5. Approval ke baad card download karlein.
+            </div>
+            <div class="action-links">
+                <a href="https://beneficiary.nha.gov.in/" target="_blank" class="btn btn-apply">Check List & Apply</a>
+            </div>
         </div>
     </div>
 
-    <center>
-        <a href="index.html" class="btn-home">⬅️ WAPIS HOME PAR JAYEIN</a>
-    </center>
+    <div class="service-block">
+        <div class="block-title">🆔 Voter ID Card Services</div>
+        <div class="guidance-box">
+            <div class="doc-list">
+                <h4>📂 Jaruri Documents:</h4>
+                Aadhaar Card, DOB Proof (10th Marksheet), 1 Photo.
+            </div>
+            <div class="steps">
+                <h4>📝 Step-by-Step Guide:</h4>
+                1. Voters Service Portal (ECI) par register karein.<br>
+                2. Naya card banwane ke liye **'Form 6'** bharein.<br>
+                3. Correction ke liye **'Form 8'** bharein.<br>
+                4. Documents upload karein aur submit karein.<br>
+                5. Reference number se status check karte rahein.
+            </div>
+            <div class="action-links">
+                <a href="https://voters.eci.gov.in/" target="_blank" class="btn btn-apply">Naya Voter ID Apply</a>
+                <a href="https://voters.eci.gov.in/download-epic" target="_blank" class="btn btn-check">Voter ID Download</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="service-block">
+        <div class="block-title">🛂 Passport Seva</div>
+        <div class="guidance-box">
+            <div class="doc-list">
+                <h4>📂 Jaruri Documents:</h4>
+                10th Pass Marksheet (Non-ECR ke liye), Aadhaar Card, Pan Card, Bank Passbook.
+            </div>
+            <div class="steps">
+                <h4>📝 Step-by-Step Guide:</h4>
+                1. Passport Seva portal par 'New User' registration karein.<br>
+                2. Login karke Fresh Passport form bharein.<br>
+                3. Appointment date aur time select karein.<br>
+                4. ₹1500 (Fresh) fees online pay karein.<br>
+                5. Selected date ko Passport office (PSK) jayein.
+            </div>
+            <div class="action-links">
+                <a href="https://www.passportindia.gov.in/AppOnlineProject/welcomeLink" target="_blank" class="btn btn-apply">Registration Link</a>
+            </div>
+        </div>
+    </div>
+
+    <a href="index.html" class="btn btn-home">⬅️ BACK TO HOME</a>
+
 </div>
 
-<footer>
-    <p style="text-align:center; padding:20px;">&copy; 2026 Kiran Photostate Rania | Authorized CSC Center</p>
+<footer style="background:#333; color:white; text-align:center; padding:20px;">
+    <p>&copy; 2026 Kiran Photostate Rania | Shop No. 1, Main Bazar</p>
 </footer>
 
 </body>
