@@ -1,347 +1,269 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kiran Photostate Rania | No. 1 Job Portal & Online Services</title>
+    <title>Kiran Photostate & CSC Center | All Government Services</title>
+    <meta name="description" content="Kiran Photostate & CSC Center पर आधार कार्ड, पैन कार्ड, वोटर आईडी, आयुष्मान कार्ड, ई-श्रम कार्ड, जाति, आय, निवास प्रमाण पत्र, जन्म-मृत्यु प्रमाण पत्र और Family ID के लिए आवेदन करें।">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+
     <style>
-        :root {
-            --main-blue: #003366;
-            --light-blue: #e3f2fd;
-            --header-yellow: #FFD700;
-            --accent-red: #cc0000;
-            --border-color: #bbdefb;
-            --green: #28a745;
-        }
-
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Noto Sans Devanagari', sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f0f2f5;
+            background: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
         }
-
-        /* Header & Ticker */
-        .top-header {
-            background: linear-gradient(90deg, var(--main-blue), #00509d);
+        header {
+            background: linear-gradient(45deg, #0d6efd, #6610f2);
             color: white;
-            padding: 20px 0;
             text-align: center;
-            border-bottom: 4px solid var(--header-yellow);
+            padding: 30px 15px;
         }
-
-        .top-header h1 {
-            margin: 0;
-            font-size: 35px;
-            letter-spacing: 1px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        .contact-header {
-            font-size: 20px;
-            color: var(--header-yellow);
-            margin-top: 5px;
-            font-weight: bold;
-        }
-
-        .ticker-wrap {
+        header h1 { margin: 0; font-size: 32px; }
+        nav {
             background: #222;
-            color: #fff;
-            padding: 10px 0;
-            overflow: hidden;
-        }
-
-        .ticker {
-            display: inline-block;
-            white-space: nowrap;
-            animation: marquee 25s linear infinite;
-        }
-
-        @keyframes marquee {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
-        }
-
-        /* Navigation */
-        .main-nav {
-            background: #fff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+            padding: 12px;
             position: sticky;
             top: 0;
             z-index: 1000;
         }
+        nav a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        nav a:hover { color: #ffc107; }
 
-        .nav-inner {
+        .container {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: auto;
+            padding: 20px;
+        }
+        .service-card {
+            background: #fff;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .service-card h2 {
+            color: #0d6efd;
+        }
+        .apply-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .apply-btn:hover { background: #218838; }
+
+        /* Appointment Form */
+        #appointment form {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 600px;
+            margin: auto;
         }
-
-        .nav-inner a {
-            padding: 15px 18px;
-            text-decoration: none;
-            color: var(--main-blue);
-            font-weight: bold;
-            font-size: 14px;
-            transition: 0.3s;
-        }
-
-        .nav-inner a:hover {
-            background: var(--main-blue);
-            color: white;
-        }
-
-        /* Main Layout */
-        .main-container {
-            max-width: 1300px;
-            margin: 20px auto;
-            display: grid;
-            grid-template-columns: 250px 1fr 250px;
-            gap: 15px;
-            padding: 0 10px;
-        }
-
-        .sidebar {
-            background: #fff;
-            border: 1px solid var(--border-color);
-            height: fit-content;
-        }
-
-        .sb-title {
-            background: var(--main-blue);
-            color: white;
+        #appointment input,
+        #appointment select,
+        #appointment textarea {
             padding: 10px;
-            text-align: center;
-            font-weight: bold;
-        }
-
-        .sb-links a {
-            display: block;
-            padding: 10px;
-            color: #333;
-            text-decoration: none;
-            border-bottom: 1px solid #f0f0f0;
-            font-size: 14px;
-        }
-
-        .sb-links a:hover {
-            background: var(--light-blue);
-            padding-left: 15px;
-        }
-
-        /* Content Grid */
-        .content-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-        }
-
-        .job-box {
-            background: #fff;
-            border: 2px solid var(--main-blue);
-            border-radius: 4px;
-        }
-
-        .box-header {
-            background: var(--main-blue);
-            color: white;
-            padding: 8px;
-            text-align: center;
-            font-weight: bold;
-        }
-
-        .box-body {
-            padding: 10px;
-            height: 200px;
-            overflow-y: auto;
-        }
-
-        .box-body li {
-            margin-bottom: 8px;
-            color: var(--accent-red);
-            font-weight: bold;
-            font-size: 14px;
-        }
-
-        /* Appointment Form Styling */
-        #appointmentForm input, #appointmentForm select, #appointmentForm textarea {
-            width: 100%;
-            padding: 12px;
-            margin: 5px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
-            box-sizing: border-box;
+            font-size: 16px;
         }
 
-        .btn-submit {
-            background: var(--green);
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
             color: white;
             padding: 15px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .btn-submit:hover { background: #218838; }
-
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .main-container { grid-template-columns: 1fr; }
-            .sidebar { display: none; }
-            .content-grid { grid-template-columns: 1fr; }
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 22px;
         }
     </style>
 </head>
 <body>
 
-<header class="top-header">
-    <h1>KIRAN PHOTOSTATE RANIA</h1>
-    <div class="contact-header">📞 Mob: 8168205553 | Best Online Service Center</div>
+<header>
+    <h1>Kiran Photostate & CSC Center</h1>
+    <p>📍 Near Govt. Girl College, Rania | 📞 8168205553</p>
+    <p>सभी सरकारी सेवाएँ एक ही स्थान पर</p>
 </header>
 
-<div class="ticker-wrap">
-    <div class="ticker">
-        🔥 NEW: HSSC CET Group C Forms Open... | SSC MTS Result 2026 Declared... | Railway New Vacancy 2026 Apply Online... | Visit Kiran Photostate Rania for Fast Form Filling! 🔥
-    </div>
-</div>
-
-<nav class="main-nav">
-    <div class="nav-inner">
-        <a href="#">Home</a>
-        <a href="#csc-services">CSC Services</a>
-        <a href="#appointment">Book Appointment</a>
-        <a href="#">Latest Jobs</a>
-        <a href="#">Admit Card</a>
-        <a href="#">Results</a>
-        <a href="#">Syllabus</a>
-    </div>
+<nav>
+    <a href="#csc-services">CSC Services</a>
+    <a href="#appointment">Appointment</a>
+    <a href="#contact">Contact</a>
 </nav>
 
-<div class="main-container">
-    <aside class="sidebar">
-        <div class="sb-title">JOBS BY STATE</div>
-        <div class="sb-links">
-            <a href="#">Haryana Jobs</a>
-            <a href="#">Punjab Jobs</a>
-            <a href="#">Delhi Jobs</a>
-            <a href="#">Rajasthan Jobs</a>
-        </div>
-        <div class="sb-title" style="margin-top:20px; background:var(--accent-red);">OUR SERVICES</div>
-        <div class="sb-links">
-            <a href="#">Online Form Filling</a>
-            <a href="#">Passport Photo</a>
-            <a href="#">PVC Card Print</a>
-        </div>
-    </aside>
+<div class="container" id="csc-services">
 
-    <main class="content-area">
-        <div class="content-grid">
-            <div class="job-box">
-                <div class="box-header">LATEST NOTIFICATIONS</div>
-                <div class="box-body">
-                    <ul>
-                        <li>HSSC Clerk New Vacancy 2026</li>
-                        <li>SSC CGL Tier 1 Results</li>
-                        <li>UPSC Civil Services Notification</li>
-                        <li>Haryana Police Constable List</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="job-box">
-                <div class="box-header" style="background:var(--accent-red);">ADMIT CARDS</div>
-                <div class="box-body">
-                    <ul>
-                        <li>IBPS PO Mains Admit Card</li>
-                        <li>Railway ALP Exam Date</li>
-                        <li>HTET Admit Card 2026</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+    <!-- Aadhaar -->
+    <div class="service-card">
+        <h2>आधार कार्ड (Aadhaar Card)</h2>
+        <ol>
+            <li>नजदीकी CSC या Aadhaar Enrollment Center पर जाएँ।</li>
+            <li>Enrollment/Update Form भरें।</li>
+            <li>बायोमेट्रिक सत्यापन करवाएँ।</li>
+            <li>Enrollment ID (EID) प्राप्त करें।</li>
+            <li>UIDAI वेबसाइट से e-Aadhaar डाउनलोड करें।</li>
+        </ol>
+        <p><strong>दस्तावेज़:</strong> पहचान प्रमाण, पते का प्रमाण, जन्म तिथि प्रमाण</p>
+        <a href="https://myaadhaar.uidai.gov.in/" target="_blank" class="apply-btn">Apply Now</a>
+    </div>
 
-        <section id="csc-services" style="margin-top:30px;">
-            <h2 style="text-align:center;color:var(--main-blue);">Kiran Photostate & CSC Center</h2>
-            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:15px;">
-                <div style="background:#fff;padding:15px;border-radius:8px;box-shadow:0 2px 5px rgba(0,0,0,0.1); border-top: 4px solid var(--green);">
-                    <h3>Aadhaar Service</h3>
-                    <p style="font-size:13px;">New Enrollment, Correction, Update Mobile Number.</p>
-                    <a href="https://myaadhaar.uidai.gov.in/" target="_blank" style="color:var(--green); font-weight:bold; text-decoration:none;">Apply Now →</a>
-                </div>
-                <div style="background:#fff;padding:15px;border-radius:8px;box-shadow:0 2px 5px rgba(0,0,0,0.1); border-top: 4px solid var(--green);">
-                    <h3>PAN Card</h3>
-                    <p style="font-size:13px;">New PAN Card application or Correction in existing PAN.</p>
-                    <a href="https://www.onlineservices.nsdl.com/" target="_blank" style="color:var(--green); font-weight:bold; text-decoration:none;">Apply Now →</a>
-                </div>
-            </div>
-        </section>
+    <!-- PAN -->
+    <div class="service-card">
+        <h2>पैन कार्ड (PAN Card)</h2>
+        <ol>
+            <li>NSDL या UTIITSL वेबसाइट खोलें।</li>
+            <li>Form 49A भरें।</li>
+            <li>दस्तावेज़ अपलोड करें और शुल्क का भुगतान करें।</li>
+            <li>Acknowledgment Number से स्टेटस ट्रैक करें।</li>
+        </ol>
+        <p><strong>दस्तावेज़:</strong> आधार कार्ड, पते का प्रमाण, जन्म तिथि प्रमाण</p>
+        <a href="https://www.onlineservices.nsdl.com/paam/endUserRegisterContact.html" target="_blank" class="apply-btn">Apply via NSDL</a>
+    </div>
 
-        <section id="appointment" style="margin-top:40px; background:#fff; padding:20px; border-radius:8px;">
-            <h2 style="text-align:center;color:var(--main-blue);">📅 Online Appointment Book Karein</h2>
-            <form id="appointmentForm">
-                <input type="text" id="name" placeholder="Full Name (अपना नाम)" required>
-                <input type="tel" id="mobile" placeholder="Mobile Number" pattern="[0-9]{10}" required>
-                <select id="service" required>
-                    <option value="">-- Select Service (सेवा चुनें) --</option>
-                    <option>Aadhaar Card</option>
-                    <option>PAN Card</option>
-                    <option>Voter ID</option>
-                    <option>Family ID (PPP)</option>
-                    <option>Caste/Income Certificate</option>
-                </select>
-                <input type="date" id="appointmentDate" required>
-                <textarea id="message" placeholder="Message (Optional)"></textarea>
-                <button type="submit" class="btn-submit">WhatsApp Par Book Karein</button>
-            </form>
-            <p id="successMsg" style="text-align:center;color:green;font-weight:bold;display:none;margin-top:10px;">✅ Message Prepared! Redirecting to WhatsApp...</p>
-        </section>
-    </main>
+    <!-- Voter ID -->
+    <div class="service-card">
+        <h2>वोटर आईडी (Voter ID)</h2>
+        <ol>
+            <li>Voters Service Portal पर जाएँ।</li>
+            <li>Form 6 के माध्यम से नया पंजीकरण करें।</li>
+            <li>दस्तावेज़ अपलोड करें और आवेदन सबमिट करें।</li>
+        </ol>
+        <p><strong>दस्तावेज़:</strong> आधार कार्ड, पते का प्रमाण, फोटो</p>
+        <a href="https://voters.eci.gov.in/" target="_blank" class="apply-btn">Apply Now</a>
+    </div>
 
-    <aside class="sidebar">
-        <div class="sb-title">IMPORTANT LINKS</div>
-        <div class="sb-links">
-            <a href="#">Check Family ID</a>
-            <a href="#">Voter ID Download</a>
-            <a href="#">Ration Card</a>
-            <a href="#">Old Age Pension</a>
-        </div>
-    </aside>
+    <!-- Ayushman -->
+    <div class="service-card">
+        <h2>आयुष्मान भारत कार्ड (Ayushman Card)</h2>
+        <ol>
+            <li>आधिकारिक वेबसाइट पर “Am I Eligible” पर क्लिक करें।</li>
+            <li>मोबाइल OTP से लॉगिन करें।</li>
+            <li>पात्रता की जाँच करें और कार्ड डाउनलोड करें।</li>
+        </ol>
+        <p><strong>दस्तावेज़:</strong> आधार कार्ड, Family ID (PPP), राशन कार्ड</p>
+        <a href="https://beneficiary.nha.gov.in/" target="_blank" class="apply-btn">Check Eligibility</a>
+    </div>
+
+    <!-- e-Shram -->
+    <div class="service-card">
+        <h2>ई-श्रम कार्ड (e-Shram Card)</h2>
+        <ol>
+            <li>e-Shram पोर्टल पर जाएँ।</li>
+            <li>आधार OTP से रजिस्ट्रेशन करें।</li>
+            <li>व्यक्तिगत और व्यवसाय की जानकारी भरें।</li>
+            <li>UAN कार्ड डाउनलोड करें।</li>
+        </ol>
+        <p><strong>दस्तावेज़:</strong> आधार कार्ड, बैंक पासबुक</p>
+        <a href="https://eshram.gov.in/" target="_blank" class="apply-btn">Apply Now</a>
+    </div>
+
+    <!-- Haryana Certificates -->
+    <div class="service-card">
+        <h2>हरियाणा प्रमाण पत्र सेवाएँ</h2>
+        <ul>
+            <li>जाति प्रमाण पत्र (Caste Certificate)</li>
+            <li>आय प्रमाण पत्र (Income Certificate)</li>
+            <li>निवास प्रमाण पत्र (Domicile Certificate)</li>
+            <li>OBC Certificate</li>
+            <li>जन्म प्रमाण पत्र (Birth Certificate)</li>
+            <li>जन्म प्रमाण पत्र नाम जोड़ना/सुधार</li>
+            <li>मृत्यु प्रमाण पत्र (Death Certificate)</li>
+            <li>Family ID (PPP)</li>
+        </ul>
+        <p><strong>दस्तावेज़:</strong> आधार कार्ड, PPP, संबंधित प्रमाण</p>
+        <a href="https://saralharyana.gov.in/" target="_blank" class="apply-btn">Apply via SARAL</a>
+    </div>
+
 </div>
 
-<footer style="background:var(--main-blue); color:white; text-align:center; padding:30px; margin-top:30px;">
-    <p>&copy; 2026 Kiran Photostate Rania. All Rights Reserved.</p>
-    <p>📍 Near Govt. Girls College, Main Bazar, Rania</p>
-    <p>💬 <a href="https://wa.me/918168205553" style="color:var(--header-yellow); text-decoration:none;">WhatsApp: 8168205553</a></p>
+<!-- Appointment Section -->
+<section id="appointment" class="container">
+    <h2 style="text-align:center;color:#0d6efd;">📅 ऑनलाइन अपॉइंटमेंट बुक करें</h2>
+    <form id="appointmentForm">
+        <input type="text" id="name" placeholder="पूरा नाम" required>
+        <input type="tel" id="mobile" placeholder="मोबाइल नंबर" pattern="[0-9]{10}" required>
+        <select id="service" required>
+            <option value="">-- सेवा चुनें --</option>
+            <option>Aadhaar Card</option>
+            <option>PAN Card</option>
+            <option>Voter ID</option>
+            <option>Ayushman Card</option>
+            <option>e-Shram Card</option>
+            <option>Certificate Services</option>
+            <option>Family ID (PPP)</option>
+        </select>
+        <input type="date" id="date" required>
+        <input type="time" id="time" required>
+        <textarea id="message" placeholder="अतिरिक्त संदेश (वैकल्पिक)"></textarea>
+        <button type="submit" class="apply-btn">अपॉइंटमेंट बुक करें</button>
+    </form>
+    <p id="successMsg" style="text-align:center;color:green;font-weight:bold;display:none;">
+        ✅ आपका अपॉइंटमेंट सफलतापूर्वक बुक हो गया है!
+    </p>
+</section>
+
+<!-- Contact -->
+<section id="contact" style="text-align:center;padding:20px;background:#0d6efd;color:white;">
+    <h2>संपर्क करें</h2>
+    <p><strong>Kiran Photostate & CSC Center</strong></p>
+    <p>📍 Near Govt. Girl College, Rania</p>
+    <p>📞 <a href="tel:8168205553" style="color:white;">8168205553</a></p>
+    <p>💬 <a href="https://wa.me/918168205553" style="color:white;">WhatsApp Chat</a></p>
+</section>
+
+<footer>
+    <p>© 2026 Kiran Photostate & CSC Center | All Rights Reserved</p>
 </footer>
 
-<script>
-// Prevent past dates in appointment
-const dateInput = document.getElementById('appointmentDate');
-if(dateInput) {
-    const today = new Date().toISOString().split('T')[0];
-    dateInput.setAttribute('min', today);
-}
+<a href="https://wa.me/918168205553" class="whatsapp" target="_blank">💬</a>
 
+<!-- JavaScript for WhatsApp Appointment -->
+<script>
 document.getElementById("appointmentForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
     var name = document.getElementById("name").value;
     var mobile = document.getElementById("mobile").value;
     var service = document.getElementById("service").value;
-    var date = document.getElementById("appointmentDate").value;
+    var date = document.getElementById("date").value;
+    var time = document.getElementById("time").value;
     var message = document.getElementById("message").value;
 
     var whatsappNumber = "918168205553";
-    var text = `Hello Kiran Photostate!%0A*Naya Appointment*%0A------------------%0A👤 Name: ${name}%0A📞 Mobile: ${mobile}%0A🛠 Service: ${service}%0A📅 Date: ${date}%0A📝 Message: ${message}`;
-    
+    var text = `नया अपॉइंटमेंट:%0Aनाम: ${name}%0Aमोबाइल: ${mobile}%0Aसेवा: ${service}%0Aतारीख: ${date}%0Aसमय: ${time}%0Aसंदेश: ${message}`;
+
+    window.open(`https://wa.me/${whatsappNumber}?text=${text}`, "_blank");
+
     document.getElementById("successMsg").style.display = "block";
-    
-    setTimeout(() => {
-        window.open(`https://wa.me/${whatsappNumber}?text=${text}`, "_blank");
-    }, 1000);
+    document.getElementById("appointmentForm").reset();
 });
 </script>
 
